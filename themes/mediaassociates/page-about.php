@@ -10,6 +10,7 @@ get_header(); ?>
 		<section id="main">
 			<section id="content">
 				<?php the_content(); ?>
+
 				<div class="two-columns" id="planning">
 					<div class="col">
 						<h2>WHAT IS MEDIA PLANNING?</h2>
@@ -85,7 +86,9 @@ get_header(); ?>
 					<span>203-797-9500</span>
 				</div>
 			</section><!-- / content -->
+
 			<?php get_sidebar(); ?>
+
 		</section><!-- / main -->
 	</div><!-- / wrapper -->
 </div><!-- / page -->

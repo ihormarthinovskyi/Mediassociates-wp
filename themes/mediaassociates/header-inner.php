@@ -43,5 +43,6 @@
 		</ul>
 	</nav><!--nav-->
 	<?php endif; ?>
+
 	<h1><?php echo get_the_title($post_id); ?></h1>
 </div><!-- / header-bottom -->

@@ -8,8 +8,10 @@
 	add_action( 'init', 'register_my_menu' );
 	function register_my_menu() {
 		register_nav_menu( 'main_menu', __( 'Main Menu' ) );
+
 		register_nav_menu( 'services_menu', __( 'Services Menu' ) );
 		register_nav_menu( 'mobile_menu', __( 'Mobile Menu' ) );
+
 	}
 
 	function ss_init_script() {
