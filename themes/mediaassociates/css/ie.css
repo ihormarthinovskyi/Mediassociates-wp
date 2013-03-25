@@ -1,0 +1,24 @@
+header .header-holder,
+footer .line,
+.header-bottom,
+#main,
+#content .info-block,
+#content .posts,
+#content .post,
+#content .gallery-holder,
+.choose-form .txt-row,
+#main-nav {
+	zoom:1;
+}
+aside .help-form .txt,
+aside .help-form .btn,
+.choose-form .txt-row .txt,
+aside .help-form textarea,
+aside .rss-box .download{
+	behavior:url(css/PIE.htc);
+}
+header .fade-block .block .help-form .txt,
+header .fade-block .block .help-form textarea,
+header .fade-block .block .help-form .btn {
+	background:#fff;
+}
