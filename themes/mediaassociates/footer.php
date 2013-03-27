@@ -71,12 +71,29 @@
 		<strong class="menu-ttl open-nav"><span>SERVICES</span></strong>
 		<div class="nav-holder">
 			<ul class="nav">
-				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-008.png" alt="image" width="30" height="30" >TV</a></li>
-				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-009.png" alt="image" width="30" height="30" >PRINT</a></li>
-				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-010.png" alt="image" width="30" height="30" >RADIO</a></li>
-				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-011.png" alt="image" width="30" height="30" >OOH</a></li>
-				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-012.png" alt="image" width="30" height="30" >DIGITAL</a></li>
-				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-013.png" alt="image" width="30" height="30" >ANALYTICS</a></li>
+				<?php
+					$menu = wp_get_nav_menu_items(3);
+
+					$count = 07; 
+
+					if($menu):
+						foreach($menu as $item): 
+							$count++; 
+
+							$id = $item->object_id;
+							
+							$this_page = $post->ID;
+							if($count == 8 || $count == 9) {
+								$count = '0'.$count;
+							}
+							
+							echo '<li><a href="'.$item->url.'"><img src="'.get_bloginfo('template_directory').'/images/ico-0'.$count.'.png" alt="image" width="30" height="30" >'.$item->title.'</a></li>';
+		 					
+	 					endforeach;
+	 				endif;
+			
+				?>
+		
 			</ul>
 		</div>
 	</div>
