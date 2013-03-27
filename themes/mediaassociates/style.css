@@ -1894,6 +1894,7 @@ aside .rss-box .download:hover{
 		color:#023b66;
 		display:block;
 		padding:0 0 4px;
+		cursor: pointer;
 	}
 	.accordion .ttl.ui-state-active {
 		border-bottom:1px solid #6d6f71;

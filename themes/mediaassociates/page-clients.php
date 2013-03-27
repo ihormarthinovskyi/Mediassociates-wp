@@ -2,6 +2,7 @@
 	/*
 		Template Name: Clients
 	*/
+	
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <div class="page">
@@ -11,7 +12,7 @@ get_header(); ?>
 			<section id="content">
 				<?php // <h2 id="clients">CLIENTS</h2> ?>
 				<?php the_content(); ?>
-								
+				<?php if(get_field('content_filter')) remove_filter ('the_content',  'wpautop'); ?>				
 				<?php $page_title = 'Client List';  //Page ID
 				$page_data = get_page_by_title( $page_title ); ?>
 				<?php $content = apply_filters('the_content', $page_data->post_content);

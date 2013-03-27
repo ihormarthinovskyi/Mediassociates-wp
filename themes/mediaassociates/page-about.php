@@ -10,12 +10,12 @@ get_header(); ?>
 		<section id="main">
 			<section id="content">
 				<?php the_content(); ?>
-
-				<?php the_field('columns'); ?>
+				<div class="two-columns" id="planning">
+					<?php the_field('columns'); ?>
+				</div>
 				<div class="team" id="team">
 					<div class="mobile-hidden">
-						<h2>LEADERSHIP</h2>
-						<p>When ad campaigns roll, someone has to order the media. But “media buying” is no longer a simple task in a world of thousands of cable channels, DVRs, websites, online video outlets, social networks, and mobile devices. Our media buyers combine knowledge of how media performs with tough rate negotiations, and we know all the hidden points in the media world that hold cost savings. You get seamless campaign execution, savings, and better results.</p>
+						<?php if(get_field('leadership_mobile')) the_field('leadership_mobile'); ?>
 					</div>
 					<h2 class="hidden">LEADERSHIP TEAM</h2>
 					
