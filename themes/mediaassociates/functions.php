@@ -1,9 +1,12 @@
 <?php
+
 	add_theme_support( 'menus' );
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'inner_hero', 9999, 162 );
 	add_image_size( 'blog_image', 607, 241 );
-
+	add_image_size( 'leader-thumb', 95, 95, true );
+	add_image_size( 'case-image', 539, 300, true );
+	add_image_size( 'case-thumb', 79, 48, true );
 
 	add_action( 'init', 'register_my_menu' );
 	function register_my_menu() {
@@ -30,8 +33,7 @@
 		   wp_enqueue_script('script', get_bloginfo('template_directory').'/js/scripts.js', array('jquery'), '1.0');
 		}
 	}
-	add_action('wp_enqueue_scripts', 'ss_init_script'); 
-
+	add_action('wp_enqueue_scripts', 'ss_init_script');
 
 	remove_action('wp_head', 'rel_canonical'); 
 	remove_action('wp_head', 'rsd_link'); 
@@ -42,6 +44,7 @@
 	remove_action('wp_head', 'feed_links_extra', 3); 
 	remove_action('wp_head', 'start_post_rel_link', 10, 0); 
 	remove_action('wp_head', 'parent_post_rel_link', 10, 0); 
+
 	remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); 
 	
 	/**

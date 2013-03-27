@@ -9,22 +9,16 @@ get_header(); ?>
 		<?php get_template_part('header','inner'); ?>
 		<section id="main">
 			<section id="content">
-				<p>Advertising campaigns generate big data. We help you cut through it to the key insights. Mediassociates’ clients are served by an internal dedicated Analytics Group that provides ongoing reports on media performance, from buying value to brand lift to direct-response performance to cost-per-lead and cost-per-sale analysis.</p>
+				<?php the_content(); ?>
+				<?php if(get_field('content_filter')) remove_filter ('the_content',  'wpautop'); ?>	
 				<div class="info-block">
-					<h2>Analytics Planning &amp; Buying Services Include:</h2>
-					<ul class="list">
-						<li>Custom demographic segmentation</li>
-						<li>Media value-add analysis</li>
-						<li>Media post-buy reports</li>
-						<li>Direct-response evaluation</li>
-						<li>Display advertising reports</li>
-						<li>Video advertising reports</li>
-						<li>Mobile advertising reports</li>
-						<li>Social-media advertising reports</li>
-						<li>Reporting integration with client CRM systems such as <a href="#">Salesforce.com</a></li>
-						<li>Support for client A/B split tests</li>
-						<li>Ongoing creative, media and landing page optimization recommendations</li>
-					</ul>
+					<?php if(get_field('service_mod_title')) {
+						echo "<h2>";
+						the_field('service_mod_title');
+						echo "</h2>";
+					} if (get_field('service_module_content')) {
+						the_field('service_module_content');
+					} ?>
 				</div><!--info-block-->
 			</section><!-- / content -->
 			<?php get_sidebar(); ?>

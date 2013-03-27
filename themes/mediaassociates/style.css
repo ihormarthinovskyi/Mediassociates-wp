@@ -463,6 +463,7 @@ header .fade-block .block .help-form .btn-row {
 .add-nav ul li.print a {background-position:-482px 0;}
 .add-nav ul li.ooh a {background-position:-640px 0;}
 .add-nav ul li.analytic a {background-position:-799px 0;}
+// .add-nav ul li a:hover {background-color: #005DA3; color: #fff;text-decoration: none;}
 /*footer*/
 footer {
 	background:#023b66;
@@ -972,6 +973,7 @@ aside .rss-box .download:hover{
 #content .team .member p {
 	margin:0;
 	word-spacing:-1px;
+	padding-left: 109px;
 }
 /*line*/
 #content .line {
@@ -1255,11 +1257,16 @@ aside .rss-box .download:hover{
 	margin:0;
 	padding:0;
 	list-style:none;
-	overflow:hidden;
+	overflow:visible;
+	max-height:300px;
 }
 #content .gallery-holder .slides li {
 	float:left;
 	display:none;
+	border: 1px solid #E0E0E0;
+	max-height: 300px;
+	overflow: visible;
+	margin-bottom: 400px;
 }
 #content .gallery-holder .slides li img{vertical-align:top;}
 #content .gallery-holder .flex-control-nav{
@@ -1270,6 +1277,9 @@ aside .rss-box .download:hover{
 	top:0;
 	right:0;
 	z-index:100;
+}
+.flex-caption {
+	margin-top:  20px;
 }
 #content .gallery-holder .flex-control-nav li{
 	border:solid #d9d9d9;
@@ -1286,7 +1296,7 @@ aside .rss-box .download:hover{
 	list-style:none;
 	overflow:hidden;
 	position:absolute;
-	bottom:15px;
+	top: 265px;
 	left:12px;
 }
 #content .gallery-holder .flex-direction-nav li{
@@ -1884,6 +1894,7 @@ aside .rss-box .download:hover{
 		color:#023b66;
 		display:block;
 		padding:0 0 4px;
+		cursor: pointer;
 	}
 	.accordion .ttl.ui-state-active {
 		border-bottom:1px solid #6d6f71;
