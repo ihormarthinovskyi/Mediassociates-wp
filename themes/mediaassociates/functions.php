@@ -24,6 +24,7 @@
 		   wp_enqueue_script('flex', get_bloginfo('template_directory').'/js/jquery.flexslider-min.js', array('jquery'), '1.0');
 		   wp_enqueue_script('customform', get_bloginfo('template_directory').'/js/custom-form.js', array('jquery'), '1.0');
 		   wp_enqueue_script('customselect', get_bloginfo('template_directory').'/js/custom-form.select.js', array('jquery'), '1.0');
+		   wp_enqueue_script('mobilebar', get_bloginfo('template_directory').'/js/mobile-bar.js', array('jquery'), '1.0');
 		   wp_enqueue_script('inputs', get_bloginfo('template_directory').'/js/clear-inputs.js', array('jquery'), '1.0');
 		   wp_enqueue_script('slideblock', get_bloginfo('template_directory').'/js/slideBlock.js', array('jquery'), '1.0');
 		   wp_enqueue_script('script', get_bloginfo('template_directory').'/js/scripts.js', array('jquery'), '1.0');

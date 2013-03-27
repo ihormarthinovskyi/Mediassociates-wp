@@ -8,10 +8,16 @@
 	$img = wp_get_attachment_image_src(get_post_thumbnail_id($post_id),'inner_hero');
 	$menu = wp_get_nav_menu_items(3);
 
-	
+	if(is_page_template('page-about.php')) {
+		$class = 'about';
+	} elseif(is_page_template('page-clients.php')) {
+		$class = 'client';
+	}	else {
+		$class = 'news';
+	}
 
 ?>
-<div class="header-bottom news" <?php if($img): ?>style="background-image: url(<?php echo $img[0]; ?>);" <?php endif; ?>>
+<div class="header-bottom <?php echo $class; ?>" <?php if($img): ?>style="background-image: url(<?php echo $img[0]; ?>);" <?php endif; ?>>
 	
 
 	<?php if($menu): ?>
@@ -45,4 +51,26 @@
 	<?php endif; ?>
 
 	<h1><?php echo get_the_title($post_id); ?></h1>
+	<?php if(is_page_template('page-about.php')): ?>
+	<div class="pages-holder has-child">
+		<a href="#" class="open">open</a>
+		<ul class="pages-nav">
+			<li><a href="#">Overview</a></li>
+			<li><a href="#planning">Planning / Buying</a></li>
+			<li><a href="#team">Leadership</a></li>
+			<li><a href="#PRINCIPLES">Principles</a></li>
+			<li><a href="#eEFFECTIVE"><span>e</span>effective</a></li>
+		</ul>
+	</div>
+	<?php endif; ?>
+
+	<?php if(is_page_template('page-clients.php')): ?>
+	<div class="pages-holder has-child">
+		<a href="#" class="open">open</a>
+		<ul class="pages-nav">
+			<li><a href="#clients">CLIENTS</a></li>
+			<li><a href="#case">CASE STUDIES</a></li>
+		</ul>
+	</div>
+	<?php endif; ?>
 </div><!-- / header-bottom -->
