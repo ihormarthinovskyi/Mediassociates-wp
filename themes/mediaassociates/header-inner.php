@@ -11,7 +11,7 @@
 	if(is_page_template('page-about.php')) {
 		$class = 'about';
 	} elseif(is_page_template('page-clients.php')) {
-		$class = 'client';
+		$class = 'clients';
 	}	else {
 		$class = 'news';
 	}
