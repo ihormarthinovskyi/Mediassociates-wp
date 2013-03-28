@@ -1,7 +1,7 @@
 <footer>
 	<div class="footer-holder">
 		<div class="holder">
-			<?php
+			<?php /*
 				$count = 0;
 				$footer_navigation = get_field('f_column','options');
 				if($footer_navigation):
@@ -32,19 +32,33 @@
 				</ul>
 				<?php endif; ?>
 			</div>
-			<?php endforeach; endif; ?>
+			<?php endforeach; endif; */ ?>
+			
+			<?php
+				wp_nav_menu (array(
+					'theme_location' => 'footer_menu',
+					'menu_id' => 'footer-nav',
+					'container' => false,
+					'container_class' => '',
+					'menu_class' => 'footer-nav',
+					'depth' => 2
+				));
+			?>
+			
 		</div><!-- / holder -->
 		<div class="line">
-			<strong class="footer-logo"><a href="<?php bloginfo('url'); ?>">Our platform to buy banner ads at huge savings.</a></strong>
-			<strong>THOUGHTGADGETS</strong>
-			<p>Views on the future of advertising. Official Mediassociates blog</p>
+			<strong class="footer-logo" style="background-image: <?php the_field('eeffective_logo', 'option'); ?>;"><a href="<?php the_field('eeffective_url', 'option'); ?>">Our platform to buy banner ads at huge savings.</a></strong>
+			<a href="<?php the_field('thought_link', 'option'); ?>" target="_blank">
+				<strong><?php the_field('thought_title', 'option'); ?></strong>
+				<p><?php the_field('thoughtgadgets_sub_head', 'option'); ?></p>
+			</a>
 		</div><!-- / line -->
 		<div class="bottom-row">
-			<strong class="phone">1-800-522-1660</strong>
+			<strong class="phone"><?php the_field('phone_number', 'option'); ?></strong>
 			<p class="copy">&copy; <?php echo date('Y'); ?> Mediassociates.</p>
 			<ul class="social">
-				<li class="twitter"><a href="#">twitter</a></li>
-				<li class="facebook"><a href="#">facebook</a></li>
+				<li class="twitter"><a href="<?php the_field('twitter', 'option'); ?>" target="_blank">twitter</a></li>
+				<li class="facebook"><a href="<?php the_field('facebook', 'option'); ?>" target="_blank">facebook</a></li>
 			</ul>
 		</div><!-- / bottom-row -->
 	</div><!-- / footer-holder -->
@@ -56,7 +70,7 @@
 	</div>
 	<div class="form-frame">
 		<div class="form-holder">
-			<strong class="form-ttl open-form"><em>How MAY we help <span>you</span>?</em></strong>
+			<strong class="form-ttl open-form"><em><?php the_field('how_may', 'option'); ?></em></strong>
 			<?php
 
 				
@@ -71,6 +85,7 @@
 		<strong class="menu-ttl open-nav"><span>SERVICES</span></strong>
 		<div class="nav-holder">
 			<ul class="nav">
+<<<<<<< HEAD
 				<?php
 					$menu = wp_get_nav_menu_items(3);
 
@@ -94,8 +109,44 @@
 			
 				?>
 		
+=======
+				<?php 
+					$count = 07; 
+					$mobile_menu = wp_get_nav_menu_items(3);
+					foreach($mobile_menu as $item): 
+					$count++; 
+	
+					$id = $item->object_id;
+					
+					$this_page = $post->ID;
+					
+	
+					if($id == $this_page) {
+						echo '<li class="active">';
+					} else {
+						echo '<li>';
+					}
+	 
+				?>
+					<a data-id="<?php echo $id; ?>" href="<?php echo $item->url; ?>">
+						<img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-0<?php echo sprintf("%02d", $count); ?>.png" alt="image" width="30" height="30" >
+						<span><?php echo $item->title; ?></span>
+					</a>
+				</li>
+				<?php endforeach; ?>
 			</ul>
-		</div>
+		</div><!--nav-->
+		<!-- <div class="nav-holder">
+			<ul class="nav">
+				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-008.png" alt="image" width="30" height="30" >TV</a></li>
+				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-009.png" alt="image" width="30" height="30" >PRINT</a></li>
+				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-010.png" alt="image" width="30" height="30" >RADIO</a></li>
+				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-011.png" alt="image" width="30" height="30" >OOH</a></li>
+				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-012.png" alt="image" width="30" height="30" >DIGITAL</a></li>
+				<li><a href="#"><img src="<?php echo get_bloginfo('template_directory').'/'; ?>images/ico-013.png" alt="image" width="30" height="30" >ANALYTICS</a></li>
+>>>>>>> tweaks
+			</ul>
+		</div> -->
 	</div>
 </div><!--mobile-bar-->
 <?php wp_footer(); ?>

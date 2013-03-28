@@ -54,23 +54,43 @@
 	<?php if(is_page_template('page-about.php')): ?>
 	<div class="pages-holder has-child">
 		<a href="#" class="open">open</a>
-		<ul class="pages-nav">
+		<?php
+			wp_nav_menu (array(
+				'theme_location' => 'about_menu',
+				'menu_id' => 'pages-nav',
+				'container' => false,
+				'container_class' => '',
+				'menu_class' => 'pages-nav',
+				'depth' => 1
+			));
+		?>
+		<!-- <ul class="pages-nav">
 			<li><a href="#">Overview</a></li>
 			<li><a href="#planning">Planning / Buying</a></li>
 			<li><a href="#team">Leadership</a></li>
 			<li><a href="#PRINCIPLES">Principles</a></li>
 			<li><a href="#eEFFECTIVE"><span>e</span>effective</a></li>
-		</ul>
+		</ul> -->
 	</div>
 	<?php endif; ?>
 
 	<?php if(is_page_template('page-clients.php')): ?>
 	<div class="pages-holder has-child">
 		<a href="#" class="open">open</a>
-		<ul class="pages-nav">
+		<?php
+			wp_nav_menu (array(
+				'theme_location' => 'client_menu',
+				'menu_id' => 'pages-nav',
+				'container' => false,
+				'container_class' => '',
+				'menu_class' => 'pages-nav',
+				'depth' => 1
+			));
+		?>
+		<!-- <ul class="pages-nav">
 			<li><a href="#clients">CLIENTS</a></li>
 			<li><a href="#case">CASE STUDIES</a></li>
-		</ul>
+		</ul> -->
 	</div>
 	<?php endif; ?>
 </div><!-- / header-bottom -->

@@ -479,12 +479,19 @@ footer .holder {
 	overflow:hidden;
 	padding:0 0 58px;
 }
-footer .ttl {
+footer .ttl, footer ul.footer-nav li a {
 	display:block;
 	text-transform:uppercase;
 	color:#648ac0;
 	margin:0 0 1px;
 	font:14px/18px 'ralewaysemibold', sans-serif;
+}
+footer ul.footer-nav li ul.sub-menu li a {
+	display: block;
+	color: white;
+	margin: 0;
+	font: 13px/20px 'gudearegular', sans-serif;
+	text-transform: none;
 }
 footer ul {
 	margin:0;
@@ -494,7 +501,11 @@ footer ul {
 }
 footer ul li {
 	vertical-align:top;
-	padding:0 15px 0 0;
+	padding:0 31px 0 0;
+	float: left;
+}
+footer ul li li {
+float: none;
 }
 footer .col-01 {
 	float:left;
@@ -553,6 +564,9 @@ footer .line strong {
 	color:#648ac0;
 	text-transform:uppercase;
 	font:14px/18px 'ralewaysemibold', sans-serif;
+}
+footer .line a:hover {
+	text-decoration: none;
 }
 footer .line p {margin:0;}
 footer .bottom-row {
@@ -714,11 +728,11 @@ aside .form-holder{
 aside .form-holder p{
 	margin:0 0 16px 0;
 }
-aside .help-form{
+aside .help-form, .help-form{
 	padding:0px 0 0 0px;
 }
 
-aside .help-form ul {
+aside .help-form ul, .help-form ul {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -729,13 +743,13 @@ aside .help-form ul {
 	font-weight: bold;
 }
 
-aside .help-form .row, aside .help-form li{
+aside .help-form .row, aside .help-form li, .help-form .row, .help-form li{
 	overflow:hidden;
 	padding:0 0 6px;
 	margin: 0;
 	list-style: none;
 }
-aside .help-form .txt,aside .help-form li input.medium{
+aside .help-form .txt,aside .help-form li input.medium, .help-form .txt, .help-form li input.medium{
 	padding:5px 8px 6px;
 	margin:0;
 	width:230px;
@@ -761,8 +775,8 @@ aside .help-form .txt,aside .help-form li input.medium{
 	background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 4%,#fcfcfc 7%,#eff0f1 89%,#e7e8e9 100%);
 	-pie-background: linear-gradient( #ffffff 0%,#ffffff 4%,#fcfcfc 7%,#eff0f1 89%,#e7e8e9 100%);
 }
-aside .help-form .btn-frame {padding-top:4px;}
-aside .help-form .btn, aside .help-form .button {
+aside .help-form .btn-frame, .help-form .btn-frame {padding-top:4px;}
+aside .help-form .btn, aside .help-form .button, .help-form .btn, .help-form .button {
 	padding:0;
 	margin:10px 7px 0 auto;
 	position:relative;
@@ -789,11 +803,14 @@ aside .help-form .btn, aside .help-form .button {
 	background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 4%,#fcfcfc 7%,#eff0f1 89%,#e7e8e9 100%);
 	-pie-background: linear-gradient( #ffffff 0%,#ffffff 4%,#fcfcfc 7%,#eff0f1 89%,#e7e8e9 100%);
 }
-aside .help-form .area {
+#content .help-form .btn, #content .help-form .button {
+ 	margin: 10px 7px 0 23.3% ;
+}
+aside .help-form .area, .help-form .area {
 	overflow:hidden;
 	padding:0 0 5px;
 }
-aside .help-form textarea{
+aside .help-form textarea, .help-form textarea {
 	padding:5px 8px 6px;
 	margin:0;
 	width:230px;
@@ -1183,14 +1200,14 @@ aside .rss-box .download:hover{
 }
 #content .post .social ul li:first-child{padding:5px 2px 0;}
 #content .post .social ul li a {display:block;}
-#content .post .social ul li.facebook a {
+#content .post .social ul li.twitter a {
 	text-indent:-9999px;
 	overflow:hidden;
 	background:url(images/sprite-social.png) no-repeat;
 	width:28px;
 	height:28px;
 }
-#content .post .social ul li.twitter a {
+#content .post .social ul li.facebook a {
 	text-indent:-9999px;
 	overflow:hidden;
 	background:url(images/sprite-social.png) no-repeat -40px 0;
@@ -1701,7 +1718,7 @@ aside .rss-box .download:hover{
 	footer{
 		padding:24px 25px 26px;
 	}
-	footer ul{
+	/* footer ul, */ footer ul ul{
 		display:none;
 	}
 	footer .holder{
@@ -1713,7 +1730,8 @@ aside .rss-box .download:hover{
 	footer .col-04,
 	footer .col-05,
 	footer .col-06,
-	footer .col-07{
+	footer .col-07,
+	ul.footer-nav li {
 		width:100%;
 		float:none;
 		padding:0 0 9px;

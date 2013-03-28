@@ -16,7 +16,7 @@
 	<header>
 		<div class="header-holder">
 			<h1 class="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-			<strong class="phone">1-800-522-1660</strong>
+			<strong class="phone"><?php the_field('phone_number', 'option'); ?></strong>
 			<?php
 				wp_nav_menu (array(
 					'theme_location' => 'main_menu',

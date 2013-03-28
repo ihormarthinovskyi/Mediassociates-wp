@@ -11,9 +11,16 @@
 	add_action( 'init', 'register_my_menu' );
 	function register_my_menu() {
 		register_nav_menu( 'main_menu', __( 'Main Menu' ) );
+		register_nav_menu( 'footer_menu', __( 'Footer Menu' ) );
 
 		register_nav_menu( 'services_menu', __( 'Services Menu' ) );
+		// mobile services
+		register_nav_menu( 'mobile_services_menu', __( 'Mobile Services Menu' ) );
 		register_nav_menu( 'mobile_menu', __( 'Mobile Menu' ) );
+		
+		// jump menus
+		register_nav_menu( 'about_menu', __( 'About Sub Menu' ) );
+		register_nav_menu( 'client_menu', __( 'Clients Sub Menu' ) );
 
 	}
 
