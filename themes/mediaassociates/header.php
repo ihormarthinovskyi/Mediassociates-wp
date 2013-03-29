@@ -13,6 +13,7 @@
 	<![endif]-->
 </head>
 <body>
+	<div id="in_view"><!-- use this element to determine when to fix the sidebar and title bar --></div>
 	<header>
 		<div class="header-holder">
 			<h1 class="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>

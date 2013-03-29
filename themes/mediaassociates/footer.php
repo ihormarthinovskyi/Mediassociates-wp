@@ -55,7 +55,7 @@
 		</div><!-- / line -->
 		<div class="bottom-row">
 			<strong class="phone"><?php the_field('phone_number', 'option'); ?></strong>
-			<p class="copy">&copy; <?php echo date('Y'); ?> Mediassociates.</p>
+			<p class="copy">&copy; <?php echo date('Y'); ?> Mediassociates. | <a href="<?php the_field('privacy_policy_link', 'options'); ?>">Privacy Policy</a></p>
 			<ul class="social">
 				<li class="twitter"><a href="<?php the_field('twitter', 'option'); ?>" target="_blank">twitter</a></li>
 				<li class="facebook"><a href="<?php the_field('facebook', 'option'); ?>" target="_blank">facebook</a></li>

@@ -1,8 +1,12 @@
 <?php
-
+	
+	// include custom post type
+	
+	include('custom-post-type.php');
+	
 	add_theme_support( 'menus' );
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'inner_hero', 9999, 162 );
+	add_image_size( 'inner_hero', 2500, 162, true );
 	add_image_size( 'blog_image', 607, 241 );
 	add_image_size( 'leader-thumb', 95, 95, true );
 	add_image_size( 'case-image', 539, 300, true );
@@ -115,5 +119,8 @@
 		return $output_form;
 	}
 	add_shortcode( 'sidebar_form', 'sidebar_form_func' );
+	
+	
+	
 	
 ?>

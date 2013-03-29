@@ -33,11 +33,19 @@ get_header(); ?>
 							    // echo $photo; 
 							     ?>
 								<?php echo $photo ?>
-								<strong class="name"><?php the_sub_field('name_and_title'); ?></strong>
-								<?php the_sub_field('bio_intro'); ?>
-								
-								<div id="hidden_<? echo $counter; ?>" style="display:none;">
-									<?php the_sub_field('bio_full'); ?>
+								<div id="mobi_click">
+									<strong class="name"><?php the_sub_field('name_and_title'); ?></strong>
+									<div class="full">
+										<?php the_sub_field('bio_intro'); ?>
+										
+										<div id="hidden_<? echo $counter; ?>" style="display:none;">
+											<?php the_sub_field('bio_full'); ?>
+										</div>
+									</div>
+									<div class="mobile">
+										<?php the_sub_field('bio_intro'); ?>
+										<?php the_sub_field('bio_full'); ?>
+									</div>
 								</div>
 					 	</div><!-- / member -->
 						<?php 
@@ -73,8 +81,8 @@ get_header(); ?>
 </div><!-- / page -->
 <script>
 	var count = 0;
-	$( '.member' ).each(function( index ) {
-		  $(this).find('p').first().append(' <a href="javascript:void(0)" id="readmore" data-attr="hidden_'+count+'">...More</a>');
+	$( '.member .full' ).each(function( index ) {
+		  $(this).find('p').first().after(' <a href="javascript:void(0)" id="readmore" data-attr="hidden_'+count+'">...More</a>');
 		  count++;
 	});
 	$('a#readmore').bind('click',function() {
@@ -82,6 +90,7 @@ get_header(); ?>
 		$('#'+this_id).slideToggle();
 		//console.log(this_id);
 	});
+	// hide and display in scripts.js
 </script>
 <?php endwhile; ?>
 <?php get_footer(); ?>

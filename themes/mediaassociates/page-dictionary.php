@@ -11,12 +11,14 @@ get_header(); ?>
 		<?php get_template_part('header','inner'); ?>
 		<section id="main">
 			<section id="content">
+			<?php the_content(); ?>
 				<div class="choose-form">
-					<form action="#">
+					<form id="form" action="#" >
 						<fieldset>
 							<div class="txt-row">
 								<input class="txt" type="text" value="Search" />
-								<select class="sel">
+								<input type="submit" value="submit" />
+								<!-- <select class="sel">
 									<option>a</option>
 									<option>b</option>
 									<option>c</option>
@@ -43,99 +45,145 @@ get_header(); ?>
 									<option>x</option>
 									<option>y</option>
 									<option>z</option>
-								</select>
+								</select> -->
 							</div>
 							<ul class="alphabet">
-								<li><a href="#">a</a></li>
-								<li><a href="#">b</a></li>
-								<li><a href="#">c</a></li>
-								<li class="active"><a href="#">d</a></li>
-								<li><a href="#">e</a></li>
-								<li><a href="#">f</a></li>
-								<li><a href="#">g</a></li>
-								<li><a href="#">h</a></li>
-								<li><a href="#">i</a></li>
-								<li><a href="#">j</a></li>
-								<li><a href="#">k</a></li>
-								<li><a href="#">l</a></li>
-								<li><a href="#">m</a></li>
-								<li><a href="#">n</a></li>
-								<li><a href="#">o</a></li>
-								<li><a href="#">p</a></li>
-								<li><a href="#">q</a></li>
-								<li><a href="#">r</a></li>
-								<li><a href="#">s</a></li>
-								<li><a href="#">t</a></li>
-								<li><a href="#">u</a></li>
-								<li><a href="#">v</a></li>
-								<li><a href="#">w</a></li>
-								<li><a href="#">x</a></li>
-								<li><a href="#">y</a></li>
-								<li><a href="#">z</a></li>
+								<li class="a"><a href="#">a</a></li>
+								<li class="b"><a href="#">b</a></li>
+								<li class="c"><a href="#">c</a></li>
+								<li class="d"><a href="#">d</a></li>
+								<li class="e"><a href="#">e</a></li>
+								<li class="f"><a href="#">f</a></li>
+								<li class="g"><a href="#">g</a></li>
+								<li class="h"><a href="#">h</a></li>
+								<li class="i"><a href="#">i</a></li>
+								<li class="j"><a href="#">j</a></li>
+								<li class="k"><a href="#">k</a></li>
+								<li class="l"><a href="#">l</a></li>
+								<li class="m"><a href="#">m</a></li>
+								<li class="n"><a href="#">n</a></li>
+								<li class="o"><a href="#">o</a></li>
+								<li class="p"><a href="#">p</a></li>
+								<li class="q"><a href="#">q</a></li>
+								<li class="r"><a href="#">r</a></li>
+								<li class="s"><a href="#">s</a></li>
+								<li class="t"><a href="#">t</a></li>
+								<li class="u"><a href="#">u</a></li>
+								<li class="v"><a href="#">v</a></li>
+								<li class="w"><a href="#">w</a></li>
+								<li class="x"><a href="#">x</a></li>
+								<li class="y"><a href="#">y</a></li>
+								<li class="z"><a href="#">z</a></li>
 							</ul>
-							<article>
-								<strong class="ttl">Daily Effective Circulation (DEC) / Daily Impressions:</strong>
-								<p>In outdoor advertising, the average number of persons ages 18+ exposed to an outdoor billboard in a 12-hour period (if not illuminated) or an 18-hour period (if illuminated).</p>
-							</article>
-							<article>
-								<strong class="ttl">Daypart:</strong>
-								<p>A media buying approach used in television and radio to allocate ads to certain sections of the day. In television these are early morning (6-9 a.m.), daytime (9 a.m.-3:30 p.m.), early fringe (3:30-5:30 p.m.), early news (5:30-7 p.m.), prime access (7-8 p.m.), prime (8-11 p.m.), late news (11-11:30 p.m.), late fringe (11:30 p.m.-1 a.m.), and late night (1-6 a.m.)</p>
-							</article>
-							<article>
-								<strong class="ttl">Designated Market Area (DMA):</strong>
-								<p>A discrete geographic area used for television targeting which includes a set of U.S. counties exclusive of others. Each county in the United States is assigned to one DMA; there are 210 DMAs in total.</p>
-							</article>
-							<article>
-								<strong class="ttl">Diary:</strong>
-								<p>A daily record used by survey respondents to track media ratings.</p>
-							</article>
-							<article>
-								<strong class="ttl">Direct Marketing:</strong>
-								<p>A type of marketing in which (a) marketers contact consumers directly via targeting, without using intermediary media such as television, radio or print, and (b) marketers provide a direct response mechanism such as a phone number. Examples of direct marketing include telemarketing, direct mail, and email.</p>
-							</article>
-							<article>
-								<strong class="ttl">Direct Response Television (DRTV):</strong>
-								<p>Television advertising time inventory purchased with the intent of getting an immediate response (such as via an 800 number with a call to action). DRTV broadcast and cable times are typically sold at a discount based on unused inventory, and the spots may be pre-empted by other paid advertising. There are two forms of DRTV, long form (or informercials) with commercials longer than 2 minutes, and short form with commercials shorter than 2 minutes. The objective is to have the consumer contact the advertiser directly to purchase the product or service.</p>
-							</article>
-							<article>
-								<strong class="ttl">Do Not Call List (DNC):</strong>
-								<p>The National Do Not Call Registry is managed by the Federal Trade Commission to protect consumers from unwanted telephone solicitations. Consumers who opt in to the program at www.donotcall.gov may register their home or mobile phone number, and within 30 days the phone number goes on a list of numbers excluded from telemarketing in the United States. Marketers in the United States are required to continuously update their direct marketing lists against the DNC lists and suppress DNC phone numbers from outbound solicitations, or face significant fines. Some exceptions apply, such as the ability of nonprofit organizations, political organizations, or companies with current customers to contact people via telephone.</p>
-							</article>
-							<article>
-								<strong class="ttl">Duplication:</strong>
-								<p>The number of people in one media's audience who are also exposed to another form of media.</p>
-							</article>
+							<div id="definitions">
+								<!-- load dev here -->
+							</div>
 							<ul class="alphabet">
-								<li><a href="#">a</a></li>
-								<li><a href="#">b</a></li>
-								<li><a href="#">c</a></li>
-								<li class="active"><a href="#">d</a></li>
-								<li><a href="#">e</a></li>
-								<li><a href="#">f</a></li>
-								<li><a href="#">g</a></li>
-								<li><a href="#">h</a></li>
-								<li><a href="#">i</a></li>
-								<li><a href="#">j</a></li>
-								<li><a href="#">k</a></li>
-								<li><a href="#">l</a></li>
-								<li><a href="#">m</a></li>
-								<li><a href="#">n</a></li>
-								<li><a href="#">o</a></li>
-								<li><a href="#">p</a></li>
-								<li><a href="#">q</a></li>
-								<li><a href="#">r</a></li>
-								<li><a href="#">s</a></li>
-								<li><a href="#">t</a></li>
-								<li><a href="#">u</a></li>
-								<li><a href="#">v</a></li>
-								<li><a href="#">w</a></li>
-								<li><a href="#">x</a></li>
-								<li><a href="#">y</a></li>
-								<li><a href="#">z</a></li>
+								<li class="a"><a href="#">a</a></li>
+								<li class="b"><a href="#">b</a></li>
+								<li class="c"><a href="#">c</a></li>
+								<li class="d"><a href="#">d</a></li>
+								<li class="e"><a href="#">e</a></li>
+								<li class="f"><a href="#">f</a></li>
+								<li class="g"><a href="#">g</a></li>
+								<li class="h"><a href="#">h</a></li>
+								<li class="i"><a href="#">i</a></li>
+								<li class="j"><a href="#">j</a></li>
+								<li class="k"><a href="#">k</a></li>
+								<li class="l"><a href="#">l</a></li>
+								<li class="m"><a href="#">m</a></li>
+								<li class="n"><a href="#">n</a></li>
+								<li class="o"><a href="#">o</a></li>
+								<li class="p"><a href="#">p</a></li>
+								<li class="q"><a href="#">q</a></li>
+								<li class="r"><a href="#">r</a></li>
+								<li class="s"><a href="#">s</a></li>
+								<li class="t"><a href="#">t</a></li>
+								<li class="u"><a href="#">u</a></li>
+								<li class="v"><a href="#">v</a></li>
+								<li class="w"><a href="#">w</a></li>
+								<li class="x"><a href="#">x</a></li>
+								<li class="y"><a href="#">y</a></li>
+								<li class="z"><a href="#">z</a></li>
 							</ul>
 						</fieldset>
 					</form>
 				</div><!-- / chose-form -->
+				<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+				  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+				  
+				  <?php
+				  	 // create loop for auto complete
+				  	 $loop = new WP_Query(array('post_type'=>'dictionary', 'taxonomy'=>'dictionary_cat', 'orderby' => 'menu_order', 'order' => 'asc')); 
+				  ?>
+				<script>
+					$(function() {
+					    var availableTags = [
+					      <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					      	"<?php the_title(); ?>",
+					      <?php endwhile; ?>
+					      <?php endif; ?>
+					      "--"
+					    ];
+					    $( ".txt" ).autocomplete({
+					      source: availableTags
+					    });
+					  });
+					$('.alphabet li a').each(function (i) {
+						$(this).attr('href', 'javascript:void(0)');
+					});
+					
+					function the_def(term, term_title) {
+						$("#definitions").slideUp(function() {
+							$(this).load('http://media/media-dictionary/hidden/?'+term_title+'='+term, function() {
+									$(this).slideDown();
+								});
+							});
+					}
+					function serch_result(term, term_title) {
+						$("#definitions").slideUp(function() {
+							$(this).load('<?php echo get_site_url(); ?>/media-dictionary/hidden/?'+term_title+'='+term, function() {
+									$(this).slideDown();
+								});
+							});
+					}
+					$('.alphabet li a').bind('click', function () {
+						//console.log($(this).text());
+						$('.alphabet li').removeClass('active');
+						var id = $(this).parent().attr('class');
+						//console.log(id);
+						$("."+id).each(function(e){
+							$(this).addClass('active');
+							});
+						var first_term = $(this).text();
+						serch_result(first_term, 'term');
+					});
+					
+					$(document).ready(function(){
+						serch_result('A', 'term');
+					    $("form#form").submit(function() {
+					       // we want to store the values from the form input box, then send via ajax below
+					       //var fid = $(".messag").attr("id");
+					       var val = $(".txt").val();
+					       val = encodeURIComponent(val.trim());
+					       $.ajax({
+					          type: "GET",
+					          url: "<?php echo get_site_url(); ?>/media-dictionary/hidden/",
+					          data: "title="+ val,
+					          success: function(incoming_data){
+					             // ALERT incoming data if coming
+					             $("#definitions").html(incoming_data);
+					           
+					          },
+					          error: function() { 
+					             alert("BROKEN REQUEST.");
+					          }
+					       });
+					       return false;
+					   });
+					
+					});
+				</script>
 			</section><!-- / content -->
 			<?php get_sidebar(); ?>
 		</section><!-- / main -->

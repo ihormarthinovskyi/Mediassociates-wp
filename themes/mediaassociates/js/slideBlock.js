@@ -7,7 +7,7 @@ $(document).ready(function(){
     var _openClassS = 'active';
     var _textOpenS = '{ - }';
     var _textCloseS = '{ + }';
-    var _durationSlide = 500;
+    var _durationSlide = 1000;
     
     $(_parentSlide).each(function(){
 	if (!$(this).is('.'+_openClassS)) {

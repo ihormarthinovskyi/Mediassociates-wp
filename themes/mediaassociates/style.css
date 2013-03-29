@@ -362,11 +362,13 @@ header .fade-block .block .help-form .btn-row {
 	float:left;
 	display:none;
 	height:710px;
+	background-size: cover;
 }
 .slideshow .slideset li .holder {
 	width:960px;
 	margin:0 auto;
 	position:relative;
+	height: 100%;
 }
 .slideshow .slideset li .holder .text-holder h2 {
 	font:40px/44px 'ralewaylight', sans-serif;
@@ -375,7 +377,7 @@ header .fade-block .block .help-form .btn-row {
 .slideshow .slideset li.slide-01 {background:url(images/img-01.jpg) no-repeat 50% 0;}
 .slideshow .slideset li.slide-01 .holder .text-holder {
 	position:absolute;
-	top:218px;
+	top:31%;
 	left:9px;
 	font:16px/28px 'gudeabold', sans-serif;
 	width:565px;
@@ -607,7 +609,7 @@ footer .bottom-row .phone {
 }
 /*services-tv*/
 .header-bottom{
-	padding:0 10017px 0 10009px;
+	padding:0 9999px 0 10009px;
 	margin:0 -9999px;
 	background:#000;
 	position:relative;
@@ -749,7 +751,7 @@ aside .help-form .row, aside .help-form li, .help-form .row, .help-form li{
 	margin: 0;
 	list-style: none;
 }
-aside .help-form .txt,aside .help-form li input.medium, .help-form .txt, .help-form li input.medium{
+aside .help-form .txt,aside .help-form li input.medium, .help-form .txt, .help-form li input.medium, #form input[type="submit"]{
 	padding:5px 8px 6px;
 	margin:0;
 	width:230px;
@@ -776,7 +778,7 @@ aside .help-form .txt,aside .help-form li input.medium, .help-form .txt, .help-f
 	-pie-background: linear-gradient( #ffffff 0%,#ffffff 4%,#fcfcfc 7%,#eff0f1 89%,#e7e8e9 100%);
 }
 aside .help-form .btn-frame, .help-form .btn-frame {padding-top:4px;}
-aside .help-form .btn, aside .help-form .button, .help-form .btn, .help-form .button {
+aside .help-form .btn, aside .help-form .button, .help-form .btn, .help-form .button, #form input[type="submit"] {
 	padding:0;
 	margin:10px 7px 0 auto;
 	position:relative;
@@ -805,6 +807,9 @@ aside .help-form .btn, aside .help-form .button, .help-form .btn, .help-form .bu
 }
 #content .help-form .btn, #content .help-form .button {
  	margin: 10px 7px 0 23.3% ;
+}
+#form input[type="submit"] {
+	margin: 0 10px;
 }
 aside .help-form .area, .help-form .area {
 	overflow:hidden;
@@ -976,6 +981,7 @@ aside .rss-box .download:hover{
 	font-family:'gudeabold', sans-serif;
 	font-style:normal;
 	color:#3d3d3d;
+	margin-left: 109px;
 }
 .team .member .name {
 	display:block;
@@ -1334,7 +1340,7 @@ aside .rss-box .download:hover{
 	background:url(images/bg-btns.png) no-repeat 0 -22px;
 }
 #content h2.ttl{
-	margin:0 0 8px;
+	margin:12px 0 8px;
 	padding:0;
 }
 #content h2.ttl sup{
@@ -1643,6 +1649,12 @@ aside .rss-box .download:hover{
 }
 
 .accordion {display:none;}
+.mobile {
+	display: none;
+}
+.full {
+	display: block;
+}
 @media only screen and (max-width: 767px) {
 	body,html{
 		min-width:320px;
@@ -1781,6 +1793,9 @@ aside .rss-box .download:hover{
 	#content p{
 		margin:0 0 15px;
 	}
+	.header-bottom.clients h1, .header-bottom.about h1 {
+		margin-left:10px;
+	}
 	.header-bottom{
 		background-size:cover !important;
 		background-position:50% 50% !important;
@@ -1832,6 +1847,9 @@ aside .rss-box .download:hover{
 	}
 	#content .team .member p{
 		display:none;
+		margin: 0;
+		word-spacing: -1px;
+		padding-left: 52px;
 	}
 	.team .member .name{
 		font-size:14px;
@@ -2029,6 +2047,18 @@ aside .rss-box .download:hover{
 	footer ul li {padding:0;}
 	#content .gallery-holder .slides li img {width:100%;}
 	.mobile-bar{display:block;}
+	footer {
+	padding: 24px 25px 70px;
+	}
+	footer .footer-logo {
+		display: none !important;
+	}
+	.mobile {
+		display: block;
+	}
+	.full {
+		display:none;
+	}
 }
 
 /* Form Styling */
