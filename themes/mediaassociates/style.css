@@ -123,6 +123,15 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 /* General settings */
+#view {
+	width: 100%;
+	height: 1px;
+	z-index: 999999999;
+}
+.fix_this {
+	z-index: 999999999;
+	width: 967px;
+}
 .page {
 	position:relative;
 	overflow:hidden;
@@ -471,6 +480,8 @@ footer {
 	background:#023b66;
 	padding:50px 0 20px;
 	color:#fff;
+	position: relative;
+	z-index:99999999;
 }
 footer a{color:#fff;}
 footer .footer-holder {
@@ -1424,7 +1435,7 @@ aside .rss-box .download:hover{
 	left:0;
 	width:100%;
 	display:none;
-	z-index:9999;
+	z-index:99999999;
 }
 .mobile-bar .btn-bar{
 	background:url(images/bg-btn.png) no-repeat;
@@ -1901,6 +1912,9 @@ aside .rss-box .download:hover{
 		font-size:18px;
 		line-height:20px;
 	}
+	.fix_this {
+		width: 100%;
+	}
 	#content .info-block{
 		padding-top:28px;
 		padding-bottom:23px;
@@ -2058,6 +2072,9 @@ aside .rss-box .download:hover{
 	}
 	.full {
 		display:none;
+	}
+	#eEFFECTIVE, #menu-item-127 {
+		display: none;
 	}
 }
 

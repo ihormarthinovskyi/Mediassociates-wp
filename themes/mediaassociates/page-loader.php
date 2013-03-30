@@ -14,7 +14,7 @@
 		$type = 'term';
 	}
 	
-	$loop = new WP_Query(array('post_type'=>'dictionary', 'taxonomy'=>'dictionary_cat', $type => $term, 'orderby' => 'menu_order', 'order' => 'asc'));
+	$loop = new WP_Query(array('post_type'=>'dictionary', 'taxonomy'=>'dictionary_cat', $type => $term, 'posts_per_page' => '-1', 'orderby' => 'menu_order', 'order' => 'asc'));
  ?>
 <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<article>

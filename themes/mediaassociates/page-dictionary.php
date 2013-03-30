@@ -114,7 +114,7 @@ get_header(); ?>
 				  
 				  <?php
 				  	 // create loop for auto complete
-				  	 $loop = new WP_Query(array('post_type'=>'dictionary', 'taxonomy'=>'dictionary_cat', 'orderby' => 'menu_order', 'order' => 'asc')); 
+				  	 $loop = new WP_Query(array('post_type'=>'dictionary','posts_per_page' => '-1', 'taxonomy'=>'dictionary_cat', 'orderby' => 'menu_order', 'order' => 'asc')); 
 				  ?>
 				<script>
 					$(function() {

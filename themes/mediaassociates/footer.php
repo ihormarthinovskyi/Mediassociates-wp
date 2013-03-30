@@ -124,6 +124,8 @@
 		</div> -->
 	</div>
 </div><!--mobile-bar-->
+<div id="view"><!-- use this element to determine when to fix the sidebar and title bar --></div>
+
 <?php wp_footer(); ?>
 </body>
 </html>

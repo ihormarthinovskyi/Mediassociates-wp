@@ -85,80 +85,20 @@ $(document).ready(function(){
 		});
 	}
 });
-// inview library
-/*
- * Viewport - jQuery selectors for finding elements in viewport
- *
- * Copyright (c) 2008-2009 Mika Tuupola
- *
- * Licensed under the MIT license:
- *   http://www.opensource.org/licenses/mit-license.php
- *
- * Project home:
- *  http://www.appelsiini.net/projects/viewport
- *
- */
-(function($) {
-    
-    $.belowthefold = function(element, settings) {
-        var fold = $(window).height() + $(window).scrollTop();
-        return fold <= $(element).offset().top - settings.threshold;
-    };
 
-    $.abovethetop = function(element, settings) {
-        var top = $(window).scrollTop();
-        return top >= $(element).offset().top + $(element).height() - settings.threshold;
-    };
-    
-    $.rightofscreen = function(element, settings) {
-        var fold = $(window).width() + $(window).scrollLeft();
-        return fold <= $(element).offset().left - settings.threshold;
-    };
-    
-    $.leftofscreen = function(element, settings) {
-        var left = $(window).scrollLeft();
-        return left >= $(element).offset().left + $(element).width() - settings.threshold;
-    };
-    
-    $.inviewport = function(element, settings) {
-        return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
-    };
-    
-    $.extend($.expr[':'], {
-        "below-the-fold": function(a, i, m) {
-            return $.belowthefold(a, {threshold : 0});
-        },
-        "above-the-top": function(a, i, m) {
-            return $.abovethetop(a, {threshold : 0});
-        },
-        "left-of-screen": function(a, i, m) {
-            return $.leftofscreen(a, {threshold : 0});
-        },
-        "right-of-screen": function(a, i, m) {
-            return $.rightofscreen(a, {threshold : 0});
-        },
-        "in-viewport": function(a, i, m) {
-            return $.inviewport(a, {threshold : 0});
-        }
-    });
+	
 
-    
-})(jQuery);
-//	usage
-// $(":in-viewport")
-// $(":below-the-fold")
-// $(":above-the-top")
-// $(":left-of-screen")
-// $(":right-of-screen")
-//
-// resize the home page slide show
 $(document).ready(function() {
 
 	// leadership functions
 	var mobile_true = false;
-	var veiwport_height = $(window).height();
+	var viewport_height = $(window).height();
 	var nav_height = $('header').height();
 	var window_width = $(window).width();
+	var view_posistion = nav_height + 64;
+	console.log(mobile_true + '---' + viewport_height  + '---' + nav_height  + '---' + window_width);
+	$('#view').css({ 'position' : 'absolute', 'top' : view_posistion+'px'});
+	// position #in_view
 	
 	function win_width() {
 		var current_width = $(window).width();
@@ -166,9 +106,9 @@ $(document).ready(function() {
 			mobile_true = true;
 		} else {
 			mobile_true = false;
-			$(
 		}
 	} win_width();
+	
 	$('#mobi_click').click(function(){
 		if (mobile_true) {
 			$(this).find('.mobile p').slideToggle();
@@ -178,10 +118,39 @@ $(document).ready(function() {
 		win_width();
 	});
 	
+	$('#view').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+	  if (isInView) {
+	    // element is now visible in the viewport
+	    if (visiblePartY == 'top') {
+	      // top part of element is visible
+	    } else if (visiblePartY == 'bottom') {
+	      // bottom part of element is visible
+	    } else {
+	      // whole part of element is visible
+	        $('.fix_this').css({'position':'relative', 'top':'0'});
+	        $(' aside').css({'position':'relative', 'right':'0', 'top':'0'});
+	      
+	    }
+	  } else {
+	    // element has gone out of viewport
+	      $('.fix_this').css({'position':'fixed', 'top':'0'});
+	      $('aside').css({'position':'fixed','right':'0px','top':'162px'});
+	  }
+	});
 	// home slide resize
+	
+	
 
 });
 
+//hide browser stuff
+window.addEventListener("load",function() {
+	// Set a timeout...
+	setTimeout(function(){
+		// Hide the address bar!
+		window.scrollTo(0, 1);
+	}, 0);
+});
 // remove this if breaking IOS mobile
 (function(w){
 	// This fix addresses an iOS bug, so return early if the UA claims it's something else.

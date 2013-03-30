@@ -19,7 +19,6 @@
 ?>
 <div class="fix_this">
 	<div class="header-bottom <?php echo $class; ?>" <?php if($img): ?>style="background-image: url(<?php echo $img[0]; ?>);" <?php endif; ?>>
-		<div class="test">
 	
 		<?php if($menu): ?>
 		<nav id="main-nav">
@@ -94,6 +93,5 @@
 			</ul> -->
 		</div>
 		<?php endif; ?>
-		</div>
 	</div><!-- / header-bottom -->
 </div><!-- / fix_this -->

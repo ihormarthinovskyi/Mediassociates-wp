@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title><?php wp_title('', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	
@@ -13,7 +14,6 @@
 	<![endif]-->
 </head>
 <body>
-	<div id="in_view"><!-- use this element to determine when to fix the sidebar and title bar --></div>
 	<header>
 		<div class="header-holder">
 			<h1 class="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>

@@ -35,6 +35,7 @@
 		   wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js');
 		   wp_enqueue_script( 'jquery','1.8.2');
 		   wp_enqueue_script('ui', get_bloginfo('template_directory').'/js/jquery-ui-1.9.2.custom.min.js', array('jquery'), '1.0');
+		   wp_enqueue_script('inview', get_bloginfo('template_directory').'/js/jquery.inview.js', array('jquery'), '1.0');
 		   wp_enqueue_script('flex', get_bloginfo('template_directory').'/js/jquery.flexslider-min.js', array('jquery'), '1.0');
 		   wp_enqueue_script('customform', get_bloginfo('template_directory').'/js/custom-form.js', array('jquery'), '1.0');
 		   wp_enqueue_script('customselect', get_bloginfo('template_directory').'/js/custom-form.select.js', array('jquery'), '1.0');
