@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-<div class="slideshow">
+<div class="slideshow home_slides">
 	<div class="slideset">
 		<ul class="slides">
 			<li class="slide-01">
@@ -9,7 +9,7 @@
 						<h2>Media is changing.</h2>
 						<p>If you manage advertising, you face challenges — big data, rising mobile, shifting demos, fragmenting screens. Mediassociates can help. Our exceptional media planning, buying and innovation gets you more results from marketing. </p>
 					</div>
-					<span class="slide-info">CERN in Switzerland, birthplace of the World Wide Web.</span>
+					<span class="slide-info">Photo: CERN in Switzerland, birthplace of the World Wide Web.</span>
 				</div>
 			</li>
 			<li class="slide-02">

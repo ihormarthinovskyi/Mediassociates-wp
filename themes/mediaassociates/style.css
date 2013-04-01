@@ -371,7 +371,7 @@ header .fade-block .block .help-form .btn-row {
 	float:left;
 	display:none;
 	height:710px;
-	background-size: cover;
+	background-size: cover !important;
 }
 .slideshow .slideset li .holder {
 	width:960px;
@@ -388,7 +388,7 @@ header .fade-block .block .help-form .btn-row {
 	position:absolute;
 	top:31%;
 	left:9px;
-	font:16px/28px 'gudeabold', sans-serif;
+	font:18px/28px 'gudeabold', sans-serif;
 	width:565px;
 }
 .slideshow .slideset li.slide-02 {background:url(images/img-02.jpg) no-repeat 50% 0;}
@@ -1176,14 +1176,14 @@ aside .rss-box .download:hover{
 	width:100%;
 }
 #content .post .img .text {
-	position:absolute;
-	padding:14px 24px;
-	bottom:6px;
-	left:6px;
-	width:559px;
-	color:#fff;
-	background:#023b66;
-	font:30px/36px 'ralewayregular', sans-serif;
+	padding: 14px 3%;
+	bottom: 6px;
+	left: 6px;
+	color: white;
+	background: #023B66;
+	font: 30px/36px 'ralewayregular', sans-serif;
+	display: block;
+	width: 94%;
 }
 #content .post .img .text:hover {text-decoration:none;}
 #content .post .meta {
@@ -1285,7 +1285,7 @@ aside .rss-box .download:hover{
 }
 #content .gallery-holder .slideset{
 	position:relative;
-	border:1px solid #e0e0e0;
+	/*border:1px solid #e0e0e0; */
 }
 #content .gallery-holder .slides{
 	margin:0;
@@ -1304,13 +1304,14 @@ aside .rss-box .download:hover{
 }
 #content .gallery-holder .slides li img{vertical-align:top;}
 #content .gallery-holder .flex-control-nav{
-	margin:0;
+	margin:1px -1px 0 0;
 	padding:0;
 	list-style:none;
 	position:absolute;
 	top:0;
 	right:0;
 	z-index:100;
+	max-width: 160px;
 }
 .flex-caption {
 	margin-top:  20px;
@@ -1318,7 +1319,14 @@ aside .rss-box .download:hover{
 #content .gallery-holder .flex-control-nav li{
 	border:solid #d9d9d9;
 	border-width:0 0 1px 1px;
-	padding:1px 1px 0 0;
+	/*padding:1px 1px 0 0;*/
+	float: left;
+}
+#content .gallery-holder .flex-control-nav li:first-child, #content .gallery-holder .flex-control-nav li:nth-child(odd) {
+	border-width: 0 1px 1px;
+}
+#content .gallery-holder .flex-control-nav li:nth-child(even) {
+	border-width: 0 0 1px 0;
 }
 #content .gallery-holder .flex-control-nav li img{
 	vertical-align:top;
@@ -1350,6 +1358,44 @@ aside .rss-box .download:hover{
 #content .gallery-holder .flex-next{
 	background:url(images/bg-btns.png) no-repeat 0 -22px;
 }
+/* home slide nav */
+.home_slides .flex-direction-nav{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 2%;
+	width: 96%;
+}
+.home_slides .flex-direction-nav li{
+	float:left;
+	margin:0 5px 0 0;
+}
+.home_slides:hover .flex-direction-nav li {
+	display: block;
+}
+.home_slides .flex-direction-nav li a{
+	text-indent:-9999px;
+	overflow:hidden;
+	width:22px;
+	height:22px;
+	float:left;
+}
+.home_slides .flex-prev{
+	background:url(images/bg-btns.png) no-repeat;
+	position: absolute;
+	left: 0;
+}
+.home_slides .flex-next{
+	background:url(images/bg-btns.png) no-repeat 0 -22px;
+	position: absolute;
+	right: 0;
+}
+/* end home slide nav 8?
+
+
 #content h2.ttl{
 	margin:12px 0 8px;
 	padding:0;

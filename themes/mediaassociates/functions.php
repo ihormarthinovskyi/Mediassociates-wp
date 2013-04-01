@@ -9,7 +9,7 @@
 	add_image_size( 'inner_hero', 2500, 162, true );
 	add_image_size( 'blog_image', 607, 241 );
 	add_image_size( 'leader-thumb', 95, 95, true );
-	add_image_size( 'case-image', 539, 300, true );
+	add_image_size( 'case-image', 457, 300, true );
 	add_image_size( 'case-thumb', 79, 48, true );
 
 	add_action( 'init', 'register_my_menu' );
