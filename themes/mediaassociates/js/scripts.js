@@ -137,9 +137,11 @@ $(document).ready(function() {
 	      $('aside').css({'position':'fixed','right':'0px','top':'162px'});
 	  }
 	});
-	// home slide resize
+	// scroll to
 	
-	
+	$('.case-hash').click(function(){
+		reset_o(); $paneOptions.scrollTo( '#case', 1000, { offset:{ top:-5,left:-30 } });
+	});
 
 });
 

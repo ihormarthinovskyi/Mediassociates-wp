@@ -129,7 +129,7 @@ footer, header, hgroup, menu, nav, section {
 	z-index: 999999999;
 }
 .fix_this {
-	z-index: 999999999;
+	z-index: 99999;
 	width: 967px;
 }
 .page {
@@ -481,7 +481,7 @@ footer {
 	padding:50px 0 20px;
 	color:#fff;
 	position: relative;
-	z-index:99999999;
+	z-index:99999;
 }
 footer a{color:#fff;}
 footer .footer-holder {
@@ -1711,6 +1711,36 @@ aside .rss-box .download:hover{
 }
 .full {
 	display: block;
+}
+@media only screen and (max-width: 960px) {
+	body, html, header .header-holder, .wrapper, .fix_this, footer .footer-holder {
+		width: 100%;
+		min-width: 100%;
+	}
+	.header-bottom h1 {
+		width: auto;
+	}
+	#main {
+		padding: 0 2%;
+		margin: 0;
+	}
+	#content {
+		width:58%;
+	}
+	aside {
+		width: 40%;
+		max-width: 298px;
+	}
+	aside .help-form .txt, aside .help-form li input.medium, .help-form .txt, .help-form li input.medium, #form input[type="submit"] {
+		width: 90%;
+	}
+	aside .form-holder, aside .rss-box {
+		padding: 23px 7% 19px;
+	}
+	footer {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
 }
 @media only screen and (max-width: 767px) {
 	body,html{
