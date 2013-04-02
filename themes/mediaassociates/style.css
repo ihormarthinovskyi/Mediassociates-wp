@@ -1720,6 +1720,9 @@ aside .rss-box .download:hover{
 	.header-bottom h1 {
 		width: auto;
 	}
+	.header-bottom.about {
+		background-size: auto 100%;
+	}
 	#main {
 		padding: 0 2%;
 		margin: 0;
@@ -2135,7 +2138,10 @@ aside .rss-box .download:hover{
 	#container .mobile-serv li.ooh a{background-position:50% -355px;}
 	#container .mobile-serv li.analytic a{background-position:50% -448px;}
 	footer ul li {padding:0;}
-	#content .gallery-holder .slides li img {width:100%;}
+	#content .gallery-holder .slides li img {
+		width: auto;
+		height: 100%;
+	}
 	.mobile-bar{display:block;}
 	footer {
 	padding: 24px 25px 70px;

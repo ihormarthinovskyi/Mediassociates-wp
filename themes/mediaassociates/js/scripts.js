@@ -129,19 +129,62 @@ $(document).ready(function() {
 	      // whole part of element is visible
 	        $('.fix_this').css({'position':'relative', 'top':'0'});
 	        $(' aside').css({'position':'relative', 'right':'0', 'top':'0'});
-	      
+	        $('#main').css('padding-top','0px');
 	    }
 	  } else {
 	    // element has gone out of viewport
 	      $('.fix_this').css({'position':'fixed', 'top':'0'});
 	      $('aside').css({'position':'fixed','right':'0px','top':'162px'});
+	      $('#main').css('padding-top','137px');
 	  }
 	});
 	// scroll to
+	if (!mobile_true) {
+		$('.case-hash').click(function(){
+			$(window).scrollTo( '#case', 1000, { offset:{ top:-200,left:-30 } });
+		});
+		$('.clients-hash').click(function(){
+			$(window).scrollTo( '#clients', 1000, { offset:{ top:-200,left:-30 } });
+		});
+		$('.about-hash').click(function(){
+			$(window).scrollTo( '#content', 1000, { offset:{ top:-140,left:-30 } });
+		});
+		$('.planning-hash').click(function(){
+			$(window).scrollTo( '#planning', 1000, { offset:{ top:-150,left:-30 } });
+		});
+		$('.leadership-hash').click(function(){
+			$(window).scrollTo( '#team', 1000, { offset:{ top:-150,left:-30 } });
+		});
+		$('.principles-hash').click(function(){
+			$(window).scrollTo( '#PRINCIPLES', 1000, { offset:{ top:-150,left:-30 } });
+		});
+		$('.eeffect-hash').click(function(){
+			$(window).scrollTo( '#eEFFECTIVE', 1000, { offset:{ top:-165,left:-30 } });
+		});
+	} else if (mobile_true) {
+		$('.case-hash').click(function(){
+			$(window).scrollTo( '#case', 1000, { offset:{ top:-150,left:-30 } });
+		});
+		$('.clients-hash').click(function(){
+			$(window).scrollTo( '#clients', 1000, { offset:{ top:-150,left:-30 } });
+		});
+		$('.about-hash').click(function(){
+			$(window).scrollTo( '#content', 1000, { offset:{ top:-90,left:-30 } });
+		});
+		$('.planning-hash').click(function(){
+			$(window).scrollTo( '#planning', 1000, { offset:{ top:-100,left:-30 } });
+		});
+		$('.leadership-hash').click(function(){
+			$(window).scrollTo( '#team', 1000, { offset:{ top:-100,left:-30 } });
+		});
+		$('.principles-hash').click(function(){
+			$(window).scrollTo( '#PRINCIPLES', 1000, { offset:{ top:-100,left:-30 } });
+		});
+		$('.eeffect-hash').click(function(){
+			$(window).scrollTo( '#eEFFECTIVE', 1000, { offset:{ top:-115,left:-30 } });
+		});
+	}
 	
-	$('.case-hash').click(function(){
-		reset_o(); $paneOptions.scrollTo( '#case', 1000, { offset:{ top:-5,left:-30 } });
-	});
 
 });
 
