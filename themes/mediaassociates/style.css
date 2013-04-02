@@ -992,7 +992,7 @@ aside .rss-box .download:hover{
 	font-family:'gudeabold', sans-serif;
 	font-style:normal;
 	color:#3d3d3d;
-	margin-left: 109px;
+	/* margin-left: 109px; */
 }
 .team .member .name {
 	display:block;
@@ -1007,7 +1007,7 @@ aside .rss-box .download:hover{
 #content .team .member p {
 	margin:0;
 	word-spacing:-1px;
-	padding-left: 109px;
+	/* padding-left: 109px; */
 }
 /*line*/
 #content .line {
@@ -1711,6 +1711,7 @@ aside .rss-box .download:hover{
 }
 .full {
 	display: block;
+	padding-left: 109px;
 }
 @media only screen and (max-width: 960px) {
 	body, html, header .header-holder, .wrapper, .fix_this, footer .footer-holder {
@@ -1936,8 +1937,8 @@ aside .rss-box .download:hover{
 		font:18px/20px 'ralewayregular', sans-serif;
 	}
 	#content .team .member p{
-		display:none;
-		margin: 0;
+		/* display:none; */
+		margin: 0 0 14px 0;
 		word-spacing: -1px;
 		padding-left: 52px;
 	}
@@ -2150,7 +2151,7 @@ aside .rss-box .download:hover{
 		display: none !important;
 	}
 	.mobile {
-		display: block;
+		/* display: block; */
 	}
 	.full {
 		display:none;

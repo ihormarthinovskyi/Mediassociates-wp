@@ -33,7 +33,7 @@ get_header(); ?>
 							    // echo $photo; 
 							     ?>
 								<?php echo $photo ?>
-								<div id="mobi_click">
+								<div class="mobi_click">
 									<strong class="name"><?php the_sub_field('name_and_title'); ?></strong>
 									<div class="full">
 										<?php the_sub_field('bio_intro'); ?>
