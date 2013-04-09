@@ -90,7 +90,8 @@ $(document).ready(function(){
 	
 
 $(document).ready(function() {
-
+	
+	
 	// leadership functions
 	var mobile_true = false;
 	var viewport_height = $(window).height();
@@ -237,9 +238,19 @@ $(document).ready(function() {
 		});
 	}
 	
-
+	//client display 
+	$("#clients .col .ttl").click(function(){
+		if($(this).attr('id') != "lastTTL" ) {
+			$(this).next().slideToggle();
+		}
+		else {
+			$(this).next().slideToggle();
+			var next = $(this).parent().next();
+			$(next).children(":first-child").slideToggle();
+		}
+	});
 });
-
+	
 //hide browser stuff
 window.addEventListener("load",function() {
 	// Set a timeout...

@@ -127,5 +127,6 @@
 <div id="view"><!-- use this element to determine when to fix the sidebar and title bar --></div>
 
 <?php wp_footer(); ?>
+<?php the_field('all_analytics_in_footer', 'option'); ?>
 </body>
 </html>

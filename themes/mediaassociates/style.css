@@ -1266,6 +1266,8 @@ aside .rss-box .download:hover{
 	font:16px/26px 'gudeabold', sans-serif;
 	color:#023b66;
 	display:block;
+	cursor: hand;
+	cursor: pointer;
 }
 #content .clients-holder .col .list{
 	margin:0;
@@ -1743,6 +1745,9 @@ aside .rss-box .download:hover{
 	}
 }
 @media only screen and (max-width: 930px) {
+	body iframe {
+		max-width:100%;
+	}
 	body,html{
 		min-width:320px;
 	}
@@ -2008,7 +2013,7 @@ aside .rss-box .download:hover{
 		padding:0 0 5px;
 	}
 	#content .txt {margin-bottom:5px;}
-	#content .clients-holder {display:none;}
+	/* #content .clients-holder {display:none;} */
 	.accordion {
 		overflow:hidden;
 		display:block;
@@ -2155,7 +2160,14 @@ aside .rss-box .download:hover{
 	.eEFFECTIVE, #mod_1, #menu-item-127 {
 		display: none;
 	}
+	#content .clients-holder .list {
+		display:none;
+	}
 }
+
+@media only screen and (max-width: 768px) {
+}
+
 @media only screen and (max-width: 730px) {
 	
 	#content .gallery-holder .slides li img{vertical-align:top;width: 100%;height: auto;
