@@ -391,7 +391,7 @@ header .fade-block .block .help-form .btn-row {
 	margin:0 -1px 12px;
 }
 .slideshow .slideset li.slide-01 {background:url(images/img-01.jpg) no-repeat 50% 0;}
-.slideshow .slideset li.slide-01 .holder .text-holder, .text-ml {
+.slideshow .slideset li.slide-01 .holder .text-holder {
 	top:31%;
 	left:9px;
 }
@@ -399,7 +399,7 @@ header .fade-block .block .help-form .btn-row {
 .slideshow .slideset li.slide-02 .holder h2 {
 	margin-bottom:12px;
 }
-.slideshow .slideset li.slide-02 .holder .text-holder, .text-bm {
+.slideshow .slideset li.slide-02 .holder .text-holder{
 	top:346px;
 	left:270px;
 }
@@ -416,6 +416,51 @@ header .fade-block .block .help-form .btn-row {
 .slideshow .slideset li.slide-04 .holder .text-holder {
 	top:276px;
 	left:8px;
+}
+
+.text-tl {
+	top: 85px;
+	left:8px;
+}
+
+.text-tm {
+	top:85px;
+	left:270px;
+}
+
+.text-tr {
+	top:85px;
+	left:395px;
+}
+
+.text-ml {
+	top:31%;
+	left:8px;
+}
+
+.text-mm {
+	top:31%;
+	left:270px;
+}
+
+.text-mr {
+	top:31%;
+	left:395px;
+}
+
+.text-bl {
+	bottom:200px;
+	left:8px;
+}
+
+.text-bm {
+	bottom:200px;
+	left:270px;
+}
+
+.text-br {
+	bottom:200px;
+	left:395px;
 }
 
 .slideshow .slideset li .holder .text-holder p {margin:0;}

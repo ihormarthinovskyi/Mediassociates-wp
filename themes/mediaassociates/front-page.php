@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-<div class="slideshow home_slides">
+<!--<div class="slideshow home_slides">
 	<div class="slideset">
 		<ul class="slides">
 			<li class="slide-01">
@@ -39,7 +39,7 @@
 			</li>
 		</ul>
 	</div>
-</div>
+</div>-->
 <?php 
 
 $images = get_field('home_page_slider');
@@ -64,8 +64,8 @@ if( $images ){ ?>
 		    		<li class="slide-<?php echo $slide_count; ?>" style="background: url(<?php echo $image_src[0]; ?>);">
 		    			
 		    			<div class="holder">
-		    				<div class="text-holder <?php get_field('text_position', $image['id']);?>">
-		    				
+		    				<div class="text-holder <?php echo get_field('text_position', $image['id']);?>">
+								
 		    					<h2><?php echo $image['title']; ?></h2>
 		    					<p><?php echo $image['caption']; ?></p>
 		    				</div>
