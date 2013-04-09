@@ -19,7 +19,7 @@ get_header(); ?>
 						<fieldset>
 							<div class="txt-row">
 								<input class="txt" type="text" value="Search" />
-								<input type="submit" value="submit" />
+								
 								<!-- <select class="sel">
 									<option>a</option>
 									<option>b</option>
@@ -49,7 +49,7 @@ get_header(); ?>
 									<option>z</option>
 								</select> -->
 							</div>
-							<ul class="alphabet">
+							<ul class="alphabet selectdropdown">
 								<li class="a"><a href="#">a</a></li>
 								<li class="b"><a href="#">b</a></li>
 								<li class="c"><a href="#">c</a></li>
@@ -76,11 +76,11 @@ get_header(); ?>
 								<li class="x"><a href="#">x</a></li>
 								<li class="y"><a href="#">y</a></li>
 								<li class="z"><a href="#">z</a></li>
-							</ul>
+							</ul> <input type="submit" value="submit" />
 							<div id="definitions">
 								<!-- load dev here -->
 							</div>
-							<ul class="alphabet">
+							<ul class="alphabet selectdropdown">
 								<li class="a"><a href="#">a</a></li>
 								<li class="b"><a href="#">b</a></li>
 								<li class="c"><a href="#">c</a></li>
@@ -107,7 +107,7 @@ get_header(); ?>
 								<li class="x"><a href="#">x</a></li>
 								<li class="y"><a href="#">y</a></li>
 								<li class="z"><a href="#">z</a></li>
-							</ul>
+							</ul> <input type="submit" value="submit" />
 						</fieldset>
 					</form>
 				</div><!-- / chose-form -->
@@ -183,7 +183,34 @@ get_header(); ?>
 					       });
 					       return false;
 					   });
-					
+					   
+					   
+					   // create select from ul on media dictionary
+					   console.log(mobile_true);
+					   if (mobile_true) {
+					   	   $('.alphabet').show();
+					   	   $('.ui-autocomplete-input').hide();
+						   $('ul.selectdropdown').each(function(){
+						     var list=$(this),
+						     select=$(document.createElement('select')).insertBefore($(this).hide());
+						     $('>li a', this).each(function(){
+						       var target=$(this).attr('target'),
+						       option=$(document.createElement('option'))
+						        .appendTo(select)
+						        .val(this.href)
+						        .html($(this).html())
+						        .click(function(){
+						          if (target==='_blank'){
+						            window.open($(this).val());
+						          }
+						          else{
+						            window.location.href=$(this).val();
+						          }
+						         });
+						     });
+						     list.remove();
+						   });
+						} // end mobile select creator
 					});
 				</script>
 			</section><!-- / content -->
