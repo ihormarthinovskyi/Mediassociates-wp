@@ -185,7 +185,7 @@ get_header(); ?>
 						       return false;
 						   });
 						} else if (mobile_true) {
-							$("form#form").submit(function() {
+							$("select").change(function() {
 							    // we want to store the values from the form input box, then send via ajax below
 							    //var fid = $(".messag").attr("id");
 							    var val = $(".selectdropdown").val();
@@ -227,10 +227,9 @@ get_header(); ?>
 						   console.log(mobile_true);
 						   if (mobile_true) {
 						   	   //$('.alphabet').show();
-						   	   $('.ui-autocomplete-input').hide();
-							   
+						   	   $('.ui-autocomplete-input, form input[type=submit]').hide();
 							} else if (!mobile_true) {
-								$('.ui-autocomplete-input').show();
+								$('.ui-autocomplete-input, form input[type=submit]').show();
 							}// end mobile select creator
 						} mobile_select();
 					});
