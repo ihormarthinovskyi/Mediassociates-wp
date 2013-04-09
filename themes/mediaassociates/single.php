@@ -1,8 +1,9 @@
 <?php get_header(); ?>
-
+<div class="wrapper">
+<?php get_template_part('header','inner'); ?>
+</div>
 <div class="page">
 	<div class="wrapper">
-		<?php get_template_part('header','inner'); ?>
 		<section id="main">
 			<section id="content">
 				<div class="posts">

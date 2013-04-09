@@ -7,6 +7,8 @@
 	<title><?php wp_title('', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	
+	<link rel="icon" href="<?php echo get_bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
+	
 	<?php wp_head(); ?>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" media="all" type="text/css" href="<?php echo get_bloginfo('template_directory').'/'; ?>css/ie.css" />

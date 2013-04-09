@@ -47,7 +47,7 @@
 			
 		</div><!-- / holder -->
 		<div class="line">
-			<strong class="footer-logo" style="background-image: <?php the_field('eeffective_logo', 'option'); ?>;"><a href="<?php the_field('eeffective_url', 'option'); ?>">Our platform to buy banner ads at huge savings.</a></strong>
+			<strong class="footer-logo" style="background-image: <?php the_field('eeffective_logo', 'option'); ?>;"><a href="<?php the_field('eeffective_url', 'option'); ?>" target="_blank">Our platform to buy banner ads at huge savings.</a></strong>
 			<a href="<?php the_field('thought_link', 'option'); ?>" target="_blank">
 				<strong><?php the_field('thought_title', 'option'); ?></strong>
 				<p><?php the_field('thoughtgadgets_sub_head', 'option'); ?></p>

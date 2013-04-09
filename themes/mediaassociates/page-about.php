@@ -4,9 +4,12 @@
 	*/
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
+<div class="wrapper">
+<?php get_template_part('header','inner'); ?>
+</div>
 <div class="page">
 	<div class="wrapper">
-		<?php get_template_part('header','inner'); ?>
+		
 		<section id="main">
 			<section id="content">
 				<?php the_content(); ?>
@@ -14,10 +17,8 @@ get_header(); ?>
 					<?php the_field('columns'); ?>
 				</div>
 				<div class="team" id="team">
-					<div class="mobile-hidden">
-						<?php if(get_field('leadership_mobile')) the_field('leadership_mobile'); ?>
-					</div>
-					<h2 class="hidden">LEADERSHIP TEAM</h2>
+					
+					<h2>LEADERSHIP TEAM</h2>
 					
 					<?php 
 					   // get the leadership fields
@@ -64,7 +65,7 @@ get_header(); ?>
 					 
 						<?php while(has_sub_field('modules')){ ?>
 							<?php $color = get_sub_field('color'); ?>
-							<div class="line <?php echo $color; ?>" id="<?php the_sub_field('title'); ?>">
+							<div class="line <?php echo $color; ?> <?php the_sub_field('name_and_title'); ?>" id="mod_<?php echo $counter; ?>">
 								<h2><?php the_sub_field('title'); ?></h2>
 								<?php the_sub_field('content'); ?>
 					 		</div><!-- / line -->

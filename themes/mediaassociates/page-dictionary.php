@@ -6,9 +6,11 @@
 
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
+<div class="wrapper">
+<?php get_template_part('header','inner'); ?>
+</div>
 <div class="page">
 	<div class="wrapper">
-		<?php get_template_part('header','inner'); ?>
 		<section id="main">
 			<section id="content">
 			<?php the_content(); ?>

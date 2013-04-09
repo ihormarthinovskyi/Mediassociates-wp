@@ -1,12 +1,28 @@
 function initPage()
 {
-	clearFormFields({
-		clearInputs: true,
-		clearTextareas: true,
-		passwordFieldText: false,
-		addClassFocus: "focus",
-		filterClass: "default"
-	});
+	var current_width = $(window).width();
+	if (current_width <= 930) {
+		mobile_true = true;
+	} else {
+		mobile_true = false;
+	}
+	if(mobile_true) {
+		clearFormFields({
+			clearInputs: false,
+			clearTextareas: true,
+			passwordFieldText: false,
+			addClassFocus: "focus",
+			filterClass: "default"
+		});
+	} else {
+		clearFormFields({
+			clearInputs: true,
+			clearTextareas: true,
+			passwordFieldText: false,
+			addClassFocus: "focus",
+			filterClass: "default"
+		});
+	}
 }
 function clearFormFields(o)
 {

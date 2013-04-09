@@ -11,6 +11,7 @@
 	add_image_size( 'leader-thumb', 95, 95, true );
 	add_image_size( 'case-image', 457, 300, true );
 	add_image_size( 'case-thumb', 79, 48, true );
+	add_image_size( 'home-slide', 1520, 710, true );
 
 	add_action( 'init', 'register_my_menu' );
 	function register_my_menu() {
@@ -122,7 +123,9 @@
 	}
 	add_shortcode( 'sidebar_form', 'sidebar_form_func' );
 	
-	
+	// adjust tab index for download form
+	add_filter("gform_tabindex_5", create_function("", "return 10;"));
+	add_filter("gform_tabindex_3", create_function("", "return 20;"));
 	
 	
 ?>

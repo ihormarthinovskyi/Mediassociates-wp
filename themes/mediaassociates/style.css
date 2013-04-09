@@ -137,7 +137,7 @@ footer, header, hgroup, menu, nav, section {
 	overflow:hidden;
 	width:100%;
 }
-.wrapper {
+.wrapper, .fix_this {
 	margin:0 auto;
 	width:960px;
 }
@@ -146,7 +146,9 @@ header {
 	padding:33px 0 21px;
 	border-top:8px solid #005da3;
 	position:relative;
-	z-index:3;
+	z-index:999999;
+	width: 100%;
+	background-color: white;
 }
 header .header-holder {
 	margin:0 auto;
@@ -379,52 +381,41 @@ header .fade-block .block .help-form .btn-row {
 	position:relative;
 	height: 100%;
 }
+.slideshow .slideset li .holder .text-holder {
+	width:565px;
+	position:absolute;
+	font:18px/28px 'gudeabold', sans-serif;
+}
 .slideshow .slideset li .holder .text-holder h2 {
 	font:40px/44px 'ralewaylight', sans-serif;
-	margin:0 -1px 10px;
+	margin:0 -1px 12px;
 }
 .slideshow .slideset li.slide-01 {background:url(images/img-01.jpg) no-repeat 50% 0;}
-.slideshow .slideset li.slide-01 .holder .text-holder {
-	position:absolute;
+.slideshow .slideset li.slide-01 .holder .text-holder, .text-ml {
 	top:31%;
 	left:9px;
-	font:18px/28px 'gudeabold', sans-serif;
-	width:565px;
 }
 .slideshow .slideset li.slide-02 {background:url(images/img-02.jpg) no-repeat 50% 0;}
 .slideshow .slideset li.slide-02 .holder h2 {
 	margin-bottom:12px;
 }
-.slideshow .slideset li.slide-02 .holder .text-holder {
-	position:absolute;
+.slideshow .slideset li.slide-02 .holder .text-holder, .text-bm {
 	top:346px;
 	left:270px;
-	font:18px/28px 'gudeabold', sans-serif;
-	width:550px;
 }
 .slideshow .slideset li.slide-03 {background:url(images/img-03.jpg) no-repeat 50% 0;}
-.slideshow .slideset li.slide-03 .holder h2 {
-	margin-bottom:12px;
-	color:#005da3;
-}
+
 .slideshow .slideset li.slide-03 .holder .text-holder {
-	position:absolute;
 	top:85px;
 	left:489px;
-	font:18px/28px 'gudeabold', sans-serif;
-	width:550px;
-	color:#005da3;
 }
 .slideshow .slideset li.slide-04 {background:url(images/img-04.jpg) no-repeat 50% 0;}
 .slideshow .slideset li.slide-04 .holder h2 {
 	margin-bottom:12px;
 }
 .slideshow .slideset li.slide-04 .holder .text-holder {
-	position:absolute;
 	top:276px;
 	left:8px;
-	font:18px/28px 'gudeabold', sans-serif;
-	width:550px;
 }
 
 .slideshow .slideset li .holder .text-holder p {margin:0;}
@@ -693,6 +684,7 @@ footer .bottom-row .phone {
 	float:left;
 	width:590px;
 	padding:33px 0 0;
+	min-height: 800px;
 }
 #content p{
 	margin:0 0 35px;
@@ -877,7 +869,7 @@ aside .rss-box .rss{
 	width:20px;
 	height:20px;
 }
-aside .rss-box .download {
+aside .rss-box .download, .download {
 	display:block;
 	position:relative;
 	width:189px;
@@ -1170,6 +1162,7 @@ aside .rss-box .download:hover{
 	padding:6px;
 	border:1px solid #d8d8d8;
 	margin:0 -9px 15px;
+	z-index: 99;
 }
 #content .post .img img {
 	vertical-align:top;
@@ -1443,7 +1436,7 @@ aside .rss-box .download:hover{
 	height:20px;
 	position:absolute;
 	top:14px;
-	right:25px;
+	right:54px;
 }
 .mobile-nav ul.drop {
 	float:none;
@@ -1745,8 +1738,11 @@ aside .rss-box .download:hover{
 		padding-left: 1%;
 		padding-right: 1%;
 	}
+	.two-columns .col {
+		width: 44% !important;
+	}
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 930px) {
 	body,html{
 		min-width:320px;
 	}
@@ -2156,11 +2152,23 @@ aside .rss-box .download:hover{
 	.full {
 		display:none;
 	}
-	#eEFFECTIVE, #menu-item-127 {
+	.eEFFECTIVE, #mod_1, #menu-item-127 {
 		display: none;
 	}
 }
-
+@media only screen and (max-width: 730px) {
+	
+	#content .gallery-holder .slides li img{vertical-align:top;width: 100%;height: auto;
+	}
+	#content .gallery-holder .flex-direction-nav {
+		top: 10px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	#content .gallery-holder .slides li {
+		border:none;
+	}
+}
 /* Form Styling */
 /* custom forms styles */
 .customForm-hidden {
