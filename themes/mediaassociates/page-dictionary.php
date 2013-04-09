@@ -19,37 +19,37 @@ get_header(); ?>
 						<fieldset>
 							<div class="txt-row">
 								<input class="txt" type="text" value="Search" />
-								
-								<!-- <select class="sel">
-									<option>a</option>
-									<option>b</option>
-									<option>c</option>
-									<option selected="selected">d</option>
-									<option>e</option>
-									<option>f</option>
-									<option>g</option>
-									<option>h</option>
-									<option>i</option>
-									<option>j</option>
-									<option>k</option>
-									<option>l</option>
-									<option>m</option>
-									<option>n</option>
-									<option>o</option>
-									<option>p</option>
-									<option>q</option>
-									<option>r</option>
-									<option>s</option>
-									<option>t</option>
-									<option>u</option>
-									<option>v</option>
-									<option>w</option>
-									<option>x</option>
-									<option>y</option>
-									<option>z</option>
-								</select> -->
+								<select class="alphabet selectdropdown mobile">
+									<option value="a">a</option>
+									<option value="b">b</option>
+									<option value="c">c</option>
+									<option value="d">d</option>
+									<option value="e">e</option>
+									<option value="f">f</option>
+									<option value="g">g</option>
+									<option value="h">h</option>
+									<option value="i">i</option>
+									<option value="j">j</option>
+									<option value="k">k</option>
+									<option value="l">l</option>
+									<option value="m">m</option>
+									<option value="n">n</option>
+									<option value="o">o</option>
+									<option value="p">p</option>
+									<option value="q">q</option>
+									<option value="r">r</option>
+									<option value="s">s</option>
+									<option value="t">t</option>
+									<option value="u">u</option>
+									<option value="v">v</option>
+									<option value="w">w</option>
+									<option value="x">x</option>
+									<option value="y">y</option>
+									<option value="z">z</option>
+								</select> 
+								<input type="submit" value="submit" />
 							</div>
-							<ul class="alphabet selectdropdown">
+							<ul class="alphabet">
 								<li class="a"><a href="#">a</a></li>
 								<li class="b"><a href="#">b</a></li>
 								<li class="c"><a href="#">c</a></li>
@@ -76,11 +76,11 @@ get_header(); ?>
 								<li class="x"><a href="#">x</a></li>
 								<li class="y"><a href="#">y</a></li>
 								<li class="z"><a href="#">z</a></li>
-							</ul> <input type="submit" value="submit" />
+							</ul>
 							<div id="definitions">
 								<!-- load dev here -->
 							</div>
-							<ul class="alphabet selectdropdown">
+							<ul class="alphabet">
 								<li class="a"><a href="#">a</a></li>
 								<li class="b"><a href="#">b</a></li>
 								<li class="c"><a href="#">c</a></li>
@@ -107,7 +107,7 @@ get_header(); ?>
 								<li class="x"><a href="#">x</a></li>
 								<li class="y"><a href="#">y</a></li>
 								<li class="z"><a href="#">z</a></li>
-							</ul> <input type="submit" value="submit" />
+							</ul>
 						</fieldset>
 					</form>
 				</div><!-- / chose-form -->
@@ -161,56 +161,78 @@ get_header(); ?>
 						serch_result(first_term, 'term');
 					});
 					
-					$(document).ready(function(){
+					$(document).ready(function(mobile_true){
 						serch_result('A', 'term');
-					    $("form#form").submit(function() {
-					       // we want to store the values from the form input box, then send via ajax below
-					       //var fid = $(".messag").attr("id");
-					       var val = $(".txt").val();
-					       val = encodeURIComponent(val.trim());
-					       $.ajax({
-					          type: "GET",
-					          url: "<?php echo get_site_url(); ?>/media-dictionary/hidden/",
-					          data: "title="+ val,
-					          success: function(incoming_data){
-					             // ALERT incoming data if coming
-					             $("#definitions").html(incoming_data);
-					           
-					          },
-					          error: function() { 
-					             alert("BROKEN REQUEST.");
-					          }
-					       });
-					       return false;
-					   });
-					   
-					   
-					   // create select from ul on media dictionary
-					   console.log(mobile_true);
-					   if (mobile_true) {
-					   	   $('.alphabet').show();
-					   	   $('.ui-autocomplete-input').hide();
-						   $('ul.selectdropdown').each(function(){
-						     var list=$(this),
-						     select=$(document.createElement('select')).insertBefore($(this).hide());
-						     $('>li a', this).each(function(){
-						       var target=$(this).attr('target'),
-						       option=$(document.createElement('option'))
-						        .appendTo(select)
-						        .val(this.href)
-						        .html($(this).html())
-						        .click(function(){
-						          if (target==='_blank'){
-						            window.open($(this).val());
+					    if (!mobile_true) {
+						    $("form#form").submit(function() {
+						       // we want to store the values from the form input box, then send via ajax below
+						       //var fid = $(".messag").attr("id");
+						       var val = $(".txt").val();
+						       val = encodeURIComponent(val.trim());
+						       $.ajax({
+						          type: "GET",
+						          url: "<?php echo get_site_url(); ?>/media-dictionary/hidden/",
+						          data: "title="+ val,
+						          success: function(incoming_data){
+						             // ALERT incoming data if coming
+						             $("#definitions").html(incoming_data);
+						           
+						          },
+						          error: function() { 
+						             alert("BROKEN REQUEST.");
 						          }
-						          else{
-						            window.location.href=$(this).val();
-						          }
-						         });
-						     });
-						     list.remove();
+						       });
+						       return false;
 						   });
-						} // end mobile select creator
+						} else if (mobile_true) {
+							$("form#form").submit(function() {
+							    // we want to store the values from the form input box, then send via ajax below
+							    //var fid = $(".messag").attr("id");
+							    var val = $(".selectdropdown").val();
+							    
+							    val = encodeURIComponent(val.trim());
+							    serch_result(val, 'term');
+							    $.ajax({
+							       type: "GET",
+							       url: "<?php echo get_site_url(); ?>/media-dictionary/hidden/",
+							       data: "term="+ val,
+							       success: function(incoming_data){
+							          // ALERT incoming data if coming
+							          $("#definitions").html(incoming_data);
+							        
+							       },
+							       error: function() { 
+							          alert("BROKEN REQUEST.");
+							       }
+							    });
+							    return false;
+							});
+							
+						}
+					   
+					   function win_width() {
+					   	var current_width = $(window).width();
+					   	if (current_width <= 930) {
+					   		mobile_true = true;
+					   	} else {
+					   		mobile_true = false;
+					   	}
+					   } win_width();
+					   $(window).resize(function() {
+					   	win_width();
+					   	mobile_select();
+					   });
+					   function mobile_select () {
+					   // create select from ul on media dictionary
+						   console.log(mobile_true);
+						   if (mobile_true) {
+						   	   //$('.alphabet').show();
+						   	   $('.ui-autocomplete-input').hide();
+							   
+							} else if (!mobile_true) {
+								$('.ui-autocomplete-input').show();
+							}// end mobile select creator
+						} mobile_select();
 					});
 				</script>
 			</section><!-- / content -->

@@ -1731,7 +1731,7 @@ aside .rss-box .download:hover{
 		max-width: 298px;
 	}
 	aside .help-form .txt, aside .help-form li input.medium, .help-form .txt, .help-form li input.medium, #form input[type="submit"] {
-		width: 90%;
+		width: 85%;
 	}
 	aside .form-holder, aside .rss-box {
 		padding: 23px 7% 19px;
