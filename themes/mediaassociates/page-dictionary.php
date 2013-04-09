@@ -227,9 +227,9 @@ get_header(); ?>
 						   console.log(mobile_true);
 						   if (mobile_true) {
 						   	   //$('.alphabet').show();
-						   	   $('.ui-autocomplete-input, form input[type=submit]').hide();
+						   	   $('.ui-autocomplete-input, form#form input[type=submit]').hide();
 							} else if (!mobile_true) {
-								$('.ui-autocomplete-input, form input[type=submit]').show();
+								$('.ui-autocomplete-input, form#form input[type=submit]').show();
 							}// end mobile select creator
 						} mobile_select();
 					});
