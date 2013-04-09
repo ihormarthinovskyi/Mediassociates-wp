@@ -234,6 +234,21 @@ get_header(); ?>
 							}// end mobile select creator
 						} mobile_select();
 					});
+					$('.selectdropdown').css({
+					'top': '0px',
+					'left': '0px',
+					'margin': '0px',
+					'padding': '0px',
+					'opacity': '1',
+					'border': 'none',
+					'position': 'absolute',
+					'width': '50px',
+					'height': 'auto',
+					'display': 'inline-block',
+					'z-index': '999'});
+					$('#form input[type="submit"]').css({
+					'width': '65%'
+					});
 				</script>
 			</section><!-- / content -->
 			<?php get_sidebar(); ?>
