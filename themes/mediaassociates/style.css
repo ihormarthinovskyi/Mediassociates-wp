@@ -382,7 +382,8 @@ header .fade-block .block .help-form .btn-row {
 	height: 100%;
 }
 .slideshow .slideset li .holder .text-holder {
-	width:565px;
+	width:520px;
+	/* width:565px; */
 	position:absolute;
 	font:18px/28px 'gudeabold', sans-serif;
 }
@@ -418,9 +419,13 @@ header .fade-block .block .help-form .btn-row {
 	left:8px;
 }
 
+.slides li {
+	background-position:50% 0 !important;
+}
+
 .text-tl {
 	top: 85px;
-	left:8px;
+	left:45px;
 }
 
 .text-tm {
@@ -430,12 +435,12 @@ header .fade-block .block .help-form .btn-row {
 
 .text-tr {
 	top:85px;
-	left:395px;
+	right:47px;
 }
 
 .text-ml {
 	top:31%;
-	left:8px;
+	left:45px;
 }
 
 .text-mm {
@@ -445,22 +450,37 @@ header .fade-block .block .help-form .btn-row {
 
 .text-mr {
 	top:31%;
-	left:395px;
+	right:47px;
 }
 
-.text-bl {
-	bottom:200px;
-	left:8px;
+/* .text-bl {
+	top:312px;
+	left:45px;
 }
 
 .text-bm {
-	bottom:200px;
+	top:312px;
 	left:270px;
 }
 
 .text-br {
-	bottom:200px;
-	left:395px;
+	top:312px;
+	right:47px;
+} */
+
+.text-bl {
+	top:312px;
+	left:45px;
+}
+
+.text-bm {
+	top:312px;
+	left:270px;
+}
+
+.text-br {
+	top:312px;
+	right:47px;
 }
 
 .slideshow .slideset li .holder .text-holder p {margin:0;}
@@ -1842,18 +1862,15 @@ aside .rss-box .download:hover{
 	.slideshow .slideset li .text-holder{
 		font-size:12px !important;
 		line-height:19px !important;
-		top:111px !important;
-		left:43px !important;
-		width:250px !important;
+		/* top:111px !important;
+		left:43px !important; */
 	}
 	.slideshow .slideset li .holder .text-holder h2{
 		font-size:20px;
 		line-height:24px;
 		margin:0 0 5px;
 	}
-	.slideshow .slideset li .holder .text-holder{
-		width:250px !important;
-	}
+	
 	.slideshow .slideset li.slide-02 .holder .text-holder {
 		top:200px !important;
 	}
@@ -1861,6 +1878,54 @@ aside .rss-box .download:hover{
 		left:135px !important;
 		width:190px !important;
 	}
+	
+	/* .text-tl {
+	top: 85px;
+	left:45px;
+	}
+
+	.text-tm {
+		top:85px;
+		left:30%;
+	}
+
+	.text-tr {
+		top:85px;
+		right:47px;
+	}
+
+	.text-ml {
+		top:39%;
+		left:45px;
+	}
+
+	.text-mm {
+		top:39%;
+		left:30%;
+	}
+
+	.text-mr {
+		top:39%;
+		right:47px;
+	}
+
+	.text-bl {
+		top:auto;
+		left:45px;
+		bottom:10px;
+	}
+
+	.text-bm {
+		top:auto;
+		left:30%;
+		bottom:10px;
+	}
+
+	.text-br {
+		top:auto;
+		right:47px;
+		bottom:10px;
+	} */
 	.add-nav{
 		display:none;
 	}
@@ -2211,6 +2276,24 @@ aside .rss-box .download:hover{
 }
 
 @media only screen and (max-width: 768px) {
+	.mobile_bottom, .mobile_top{
+			left:50%;
+			margin-left:-154px;
+			padding:25px;
+			width:90% !important;
+		}
+		
+	.mobile_bottom {
+		bottom:0;
+		top:auto;
+		max-width:50%;
+	}
+	
+	.mobile_top {
+		top:31%;
+		bottom:auto;
+		max-width:50%;
+	}
 }
 
 @media only screen and (max-width: 730px) {
@@ -2225,7 +2308,13 @@ aside .rss-box .download:hover{
 	#content .gallery-holder .slides li {
 		border:none;
 	}
+	/* .text-tl, .text-tm, .text-tr, .text-ml, .text-mm, .text-mr, .text-bl, .text-bm, .text-br {
+		left:20%;
+		right:auto;
+	} */
+
 }
+
 /* Form Styling */
 /* custom forms styles */
 .customForm-hidden {
@@ -2316,7 +2405,7 @@ aside .rss-box .download:hover{
 	line-height: 20px;
 	cursor: default;
 	display: block;
-	padding: 5px 5px 5px 15px;
+	padding: 5px 5px 5px 10px;
 	z-index: 2;
 	text-transform:uppercase;
 }

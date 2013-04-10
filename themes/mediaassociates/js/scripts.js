@@ -125,14 +125,14 @@ $(document).ready(function() {
 	// without inview
 	function fix_nav(mobile_true) {
 		var header_height = $('header').outerHeight();
-		var nav_height = $('header').height();
+		var nav_height = $('header').outerHeight();
 		var plus = 60;
 		
 		if (mobile_true)
 			plus = 0;
 			
-		var side_posistion = header_height + nav_height + plus + plus;
-		var main_pad = header_height + nav_height + plus + plus;
+		var side_posistion = header_height + nav_height + plus;
+		var main_pad = header_height + nav_height + plus;
 		
 		$('header').css({'position':'fixed', 'top':'0'});
 		$('.fix_this').css({'position':'fixed', 'top':header_height});
@@ -143,7 +143,7 @@ $(document).ready(function() {
 			} else if (mobile_true) {
 				$('#main, .portal').css('padding-top',main_pad+30+'px');
 				}
-		$('.slideshow .slideset, .container-holder').css('padding-top',nav_height+plus+'px');
+		$('.slideshow .slideset, .container-holder').css('padding-top',nav_height+'px');
 	} fix_nav(mobile_true);
 	// with inview
 	

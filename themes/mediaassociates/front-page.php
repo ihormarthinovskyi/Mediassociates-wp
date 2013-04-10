@@ -46,16 +46,7 @@ $images = get_field('home_page_slider');
 $slide_count = 0;
 
 if( $images ){ ?>
-	<style type="text/css">
-		<?php foreach( $images as $style ){ 
-			$image_src = wp_get_attachment_image_src( $style['id'], 'home-slide' );
-			echo '
-				.slide-'.$slide_count.' {
-					background: url('.$image_src.');
-				}';
-			
-		} ?>
-	</style>
+	
     <div class="slideshow home_slides">
     	<div class="slideset">
     		<ul class="slides">
@@ -64,7 +55,7 @@ if( $images ){ ?>
 		    		<li class="slide-<?php echo $slide_count; ?>" style="background: url(<?php echo $image_src[0]; ?>);">
 		    			
 		    			<div class="holder">
-		    				<div class="text-holder <?php echo get_field('text_position', $image['id']);?>">
+		    				<div class="text-holder <?php echo get_field('text_position', $image['id'])." ". get_field('mobile_text', $image['id']);?>">
 								
 		    					<h2><?php echo $image['title']; ?></h2>
 		    					<p><?php echo $image['caption']; ?></p>
