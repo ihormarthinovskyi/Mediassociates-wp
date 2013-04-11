@@ -45,6 +45,7 @@
 		   wp_enqueue_script('inputs', get_bloginfo('template_directory').'/js/clear-inputs.js', array('jquery'), '1.0');
 		   wp_enqueue_script('slideblock', get_bloginfo('template_directory').'/js/slideBlock.js', array('jquery'), '1.0');
 		   wp_enqueue_script('script', get_bloginfo('template_directory').'/js/scripts.js', array('jquery'), '1.0');
+		   wp_enqueue_script('css3-media', get_bloginfo('template_directory').'/js/css3-mediaqueries.js', array('jquery'), '1.0');
 		}
 	}
 	add_action('wp_enqueue_scripts', 'ss_init_script');

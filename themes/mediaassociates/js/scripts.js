@@ -1,4 +1,91 @@
+var daHeight, headerHeight,lefty,righty;
+
 $(document).ready(function(){
+	//make slideshow fill screen
+	daHeight = $(window).height();
+	headerHeight = $("header").outerHeight();
+	
+	$(".slideshow .slideset li").css("height", ((daHeight-headerHeight)-2));
+	
+	//Services Menu
+	var daLi, navOff, menuOff, center;
+	//add images to anchor tag
+	$(".tv a").prepend("<img src='wp-content/themes/mediaassociates/images/service_01.png' />");
+	$(".radio a").prepend("<img src='wp-content/themes/mediaassociates/images/service_03.png' />");
+	$(".digital a").prepend("<img src='wp-content/themes/mediaassociates/images/service_05.png' />");
+	$(".print a").prepend("<img src='wp-content/themes/mediaassociates/images/service_07.png' />");
+	$(".ooh a").prepend("<img src='wp-content/themes/mediaassociates/images/service_09.png' />");
+	$(".analytic a").prepend("<img src='wp-content/themes/mediaassociates/images/service_11.png' />");
+	
+	$(window).load(function() {
+		
+		
+		//resize nav bar to fit		
+		if( $(window).width() > 768 ) {
+			var navWidth = $(".add-nav #menu").width(); //get width of nav container
+			var liAmt = $(".add-nav #menu li").length; //get number of list items
+			$(".add-nav ul li").css('padding', 0); //remove padding
+			var newWidth = (navWidth/liAmt) - 2; //calculate new width for list items, subtract 1 as buffer
+			$(".add-nav #menu li").width(newWidth);
+			$(".add-nav #menu li a").width(newWidth);
+		}
+		else if( $(window).width() <= 768 ) {
+			var navWidth = $(".add-nav #menu").width(); //get width of nav container
+			var liAmt = $(".add-nav #menu li").length; //get number of list items
+			$(".add-nav ul li").css('padding', 0); //remove padding
+			var newWidth = (navWidth/liAmt) - 2; //calculate new width for list items, subtract 1 as buffer
+			$(".add-nav #menu li").width(newWidth-2);
+			$(".add-nav #menu li a").width(newWidth-2);
+		}
+		
+		//get offset position of li's and menu and center img
+		menuOff = $(".add-nav #menu").offset();
+		
+		$(".add-nav #menu li").each(function(){
+			daLi = $(this).offset();
+			center = (daLi.left + ($(this).width()/2)) - ($(this).children().children("img").width()/2);
+			$(this).children().children("img").css("left", center);
+		});
+	});
+	
+	
+	//adjust position of nav bar images depending on screen size
+	/*if($(window).width() > 930) {
+		$(".add-nav ul li a img").css({ 
+			"position" : "fixed",
+			"top" : 475
+		});
+	}
+	else {
+		$(".add-nav ul li a img").css({
+			"position" : "absolute",
+			"top" : 0
+		});
+	}
+	
+	//check position of img on scroll
+	$(window).scroll(function(){
+	
+		//get offset position of nav bar images
+		navOff = $(".tv a img").offset();
+		
+		if(($(window).width() > 930 && navOff.top < menuOff.top) ||  $(window).scrollTop() < 164) {
+			$(".add-nav ul li a img").css({ 
+				"position" : "fixed",
+				"top" : 475
+			});
+		}
+		else if($(window).width() < 930 || ($(window).width() > 930 && navOff.top > menuOff.top)){
+			
+			$(".add-nav ul li a img").css({
+				"position" : "absolute",
+				"top" : 0
+			});
+		}
+	
+	});*/
+	
+	
 	jQuery.fn.exists = function(){return this.length>0;}
 	if ($('.slideshow .slideset').exists()) {
 		var flexslide = $('.slideshow .slideset').flexslider({
@@ -87,7 +174,37 @@ $(document).ready(function(){
 	}
 });
 
+$(window).resize(function(){
+	//make sure slideshow stays full height
+	daHeight = $(window).height();
+	headerHeight = $("header").outerHeight();
+	$(".slideshow .slideset li").css("height", ((daHeight-headerHeight)-2));
+	//resize nav bar to fit screen
+	if( $(window).width() > 768 ) {
+		var navWidth = $(".add-nav #menu").width(); //get width of nav container
+		var liAmt = $(".add-nav #menu li").length; //get number of list items
+		$(".add-nav ul li").css('padding', 0); //remove padding
+		var newWidth = (navWidth/liAmt) - 2; //calculate new width for list items, subtract 1 as buffer
+		$(".add-nav #menu li").width(newWidth);
+		$(".add-nav #menu li a").width(newWidth);
+	}
+	else if( $(window).width() <= 768 ) {
+		var navWidth = $(".add-nav #menu").width(); //get width of nav container
+		var liAmt = $(".add-nav #menu li").length; //get number of list items
+		$(".add-nav ul li").css('padding', 0); //remove padding
+		var newWidth = (navWidth/liAmt) - 2; //calculate new width for list items, subtract 1 as buffer
+		$(".add-nav #menu li").width(newWidth-2);
+		$(".add-nav #menu li a").width(newWidth-2);
+	}
 	
+	
+	//get offset position of li's and menu and center img
+	$(".add-nav #menu li").each(function(){
+		daLi = $(this).offset();
+		center = (daLi.left + ($(this).width()/2)) - ($(this).children().children("img").width()/2);
+		$(this).children().children("img").css("left", center);
+	});
+});
 
 $(document).ready(function() {
 	

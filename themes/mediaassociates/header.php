@@ -10,6 +10,7 @@
 	<link rel="icon" href="<?php echo get_bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 	
 	<?php wp_head(); ?>
+	
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" media="all" type="text/css" href="<?php echo get_bloginfo('template_directory').'/'; ?>css/ie.css" />
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
