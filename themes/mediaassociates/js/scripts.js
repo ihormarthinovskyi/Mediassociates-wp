@@ -13,12 +13,12 @@ $(document).ready(function(){
 	//Services Menu
 	var daLi, navOff, menuOff, center;
 	//add images to anchor tag
-	$(".tv a").prepend("<img src='wp-content/themes/mediaassociates/images/service_01.png' />");
-	$(".radio a").prepend("<img src='wp-content/themes/mediaassociates/images/service_03.png' />");
-	$(".digital a").prepend("<img src='wp-content/themes/mediaassociates/images/service_05.png' />");
-	$(".print a").prepend("<img src='wp-content/themes/mediaassociates/images/service_07.png' />");
-	$(".ooh a").prepend("<img src='wp-content/themes/mediaassociates/images/service_09.png' />");
-	$(".analytic a").prepend("<img src='wp-content/themes/mediaassociates/images/service_11.png' />");
+	$(".tv a").prepend("<img src='/wp-content/themes/mediaassociates/images/service_01.png' />");
+	$(".radio a").prepend("<img src='/wp-content/themes/mediaassociates/images/service_03.png' />");
+	$(".digital a").prepend("<img src='/wp-content/themes/mediaassociates/images/service_05.png' />");
+	$(".print a").prepend("<img src='/wp-content/themes/mediaassociates/images/service_07.png' />");
+	$(".ooh a").prepend("<img src='/wp-content/themes/mediaassociates/images/service_09.png' />");
+	$(".analytic a").prepend("<img src='/wp-content/themes/mediaassociates/images/service_11.png' />");
 	
 	$(window).load(function() {
 		
