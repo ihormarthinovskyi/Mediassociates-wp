@@ -4,8 +4,11 @@ $(document).ready(function(){
 	//make slideshow fill screen
 	daHeight = $(window).height();
 	headerHeight = $("header").outerHeight();
-	
-	$(".slideshow .slideset li").css("height", ((daHeight-headerHeight)-2));
+	if( $(window).width() > 930 ) {
+		$(".slideshow .slideset li").css("height", ((daHeight-headerHeight)-2));
+	} else if( $(window).width() <= 930 ) { 
+		$(".slideshow .slideset li").css("height", ((daHeight-headerHeight)-42));
+	}
 	
 	//Services Menu
 	var daLi, navOff, menuOff, center;
@@ -178,7 +181,11 @@ $(window).resize(function(){
 	//make sure slideshow stays full height
 	daHeight = $(window).height();
 	headerHeight = $("header").outerHeight();
-	$(".slideshow .slideset li").css("height", ((daHeight-headerHeight)-2));
+	if( $(window).width() > 930 ) {
+		$(".slideshow .slideset li").css("height", ((daHeight-headerHeight)-2));
+	} else if( $(window).width() <= 930 ) { 
+		$(".slideshow .slideset li").css("height", ((daHeight-headerHeight)-42));
+	}
 	//resize nav bar to fit screen
 	if( $(window).width() > 768 ) {
 		var navWidth = $(".add-nav #menu").width(); //get width of nav container

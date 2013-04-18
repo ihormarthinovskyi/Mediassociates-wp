@@ -382,7 +382,7 @@ header .fade-block .block .help-form .btn-row {
 	height: 100%;
 }
 .slideshow .slideset li .holder .text-holder {
-	width:520px;
+	max-width:69%;
 	/* width:565px; */
 	position:absolute;
 	font:18px/28px 'gudeabold', sans-serif;
@@ -426,48 +426,54 @@ header .fade-block .block .help-form .btn-row {
 .text-tl {
 	/* top: 85px; */
 	top:12%;
-	left:45px;
+	left:2%;
 }
 
 .text-tm {
 	top:12%;
-	left:270px;
+	left:50%;
+	margin-left: -25%;
 }
 
 .text-tr {
 	top:12%;
-	right:47px;
+	right:1%;
+	width: 53%;
 }
 
 .text-ml {
 	top:31%;
-	left:45px;
+	left:5%;
 }
 
 .text-mm {
 	top:31%;
-	left:270px;
+	left:50%;
+	margin-left: -25%;
 }
 
 .text-mr {
 	top:31%;
-	right:47px;
+	right:1%;
+	width: 53%;
 }
 
 .text-bl {
 	/* top:312px; */
 	top:39%;
-	left:45px;
+	left:2%;
 }
 
 .text-bm {
-	top:39%;
-	left:270px;
+	top:48%;
+	left:50%;
+	margin-left: -25%;
 }
 
 .text-br {
 	top:39%;
-	right:47px;
+	right:1%;
+	width: 53%;
 }
 
 .slideshow .slideset li .holder .text-holder p {margin:0;}
@@ -1803,6 +1809,7 @@ aside .rss-box .download:hover{
 	}
 }
 @media only screen and (max-width: 930px) {
+	.mobile-bar{display:block;}
 	body iframe {
 		max-width:100%;
 	}
@@ -2229,12 +2236,13 @@ aside .rss-box .download:hover{
 
 @media only screen and (max-width: 750px) {
 	
+	
 
 }
 
 
 @media only screen and (max-width: 730px) {
-	.mobile-bar{display:block;}
+	
 	.add-nav {display:none;}
 	#content .gallery-holder .slides li img{vertical-align:top;width: 100%;height: auto;
 	}
@@ -2243,14 +2251,14 @@ aside .rss-box .download:hover{
 	}
 	.mobile_bottom, .mobile_top{
 			left:50%;
-			margin-left:-154px;
-			padding:25px;
+			margin-left:-25%;
+			padding:5%;
 			width:90% !important;
 		}
 		
 	.mobile_bottom {
 		bottom:0;
-		top:auto;
+		top:none;
 		max-width:50%;
 	}
 	
@@ -2278,6 +2286,13 @@ aside .rss-box .download:hover{
 	
 	.mobile_bottom, .mobile_top {
 		max-width:84%;
+		left: 28%;
+	}
+}
+@media only screen and (max-height: 434px) {
+	
+	.mobile_bottom, .mobile_top {
+		top: 10%;
 	}
 }
 
