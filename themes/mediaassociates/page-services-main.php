@@ -8,8 +8,10 @@
 <?php while ( have_posts() ) : the_post(); ?>
 <div class="container-holder">
 	<section id="container">
-		<h2><?php the_title(); ?></h2>
-		<?php the_content(); ?>
+		<div class="serv_main">
+			<h2><?php the_title(); ?></h2>
+			<?php the_content(); ?>
+		</div>
 		<?php
 			wp_nav_menu (array(
 				'theme_location' => 'services_menu',

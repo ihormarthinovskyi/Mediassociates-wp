@@ -49,6 +49,7 @@ $(document).ready(function(){
 			center = (daLi.left + ($(this).width()/2)) - ($(this).children().children("img").width()/2);
 			$(this).children().children("img").css("left", center);
 		});
+		$('.add-nav ul').addClass('trans');
 	});
 	
 	
@@ -280,30 +281,9 @@ $(document).ready(function() {
 	      // bottom part of element is visible
 	    } else {
 	      // whole part of element is visible
-	      //$('aside').css({'position':'relative', 'right':'0', 'top':'0'});
-	      // remove comments for nav fix on inview event
-	      /*
-	      	$('header').css({'position':'relative', 'top':'0'});
-	        $('.fix_this').css({'position':'relative', 'top':'0'});
-	        
-	        $('#main').css('padding-top','0px');
-	      */
 	    }
 	  } else {
 	    // element has gone out of viewport
-	      
-	      //var header_height = $('header').outerHeight();
-	      //var nav_height = $('header').height();
-	      //var side_posistion = header_height + nav_height + 120;
-	      //var main_pad = header_height + nav_height + 130;
-	      
-	      //$('aside').css({'position':'fixed', 'right':'0', 'top':side_posistion+'px'});
-	      // remove comments for nav fix on inview event
-	      /*
-	      	$('header').css({'position':'fixed', 'top':'0'});
-	      	$('.fix_this').css({'position':'fixed', 'top':header_height});
-	      	$('#main').css('padding-top',main_pad+'px');
-	      */
 	  }
 	});
 	// scroll to

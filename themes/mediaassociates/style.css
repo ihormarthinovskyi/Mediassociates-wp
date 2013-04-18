@@ -502,6 +502,51 @@ header .fade-block .block .help-form .btn-row {
 	text-transform:uppercase;
 	font:24px/26px 'ralewaymedium', sans-serif;
 	float:none;
+	/* Theoretically for IE 8 & 9 (more valid) */	
+		/* ...but not required as filter works too */
+		/* should come BEFORE filter */
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		
+		/* This works in IE 8 & 9 too */
+		/* ... but also 5, 6, 7 */
+		filter: alpha(opacity=0);
+		
+		/* Older than Firefox 0.9 */
+		-moz-opacity:0;
+		
+		/* Safari 1.x (pre WebKit!) */
+		-khtml-opacity: 0;
+	    
+		/* Modern!
+		/* Firefox 0.9+, Safari 2?, Chrome any?
+		/* Opera 9+, IE 9+ */
+		opacity: 0;
+		
+		transition:linear .5s;
+		/* Safari */
+		-webkit-transition:linear .5s;
+		-moz-transition: linear .5s;
+}
+.trans, .add-nav ul.trans {
+	/* Theoretically for IE 8 & 9 (more valid) */	
+		/* ...but not required as filter works too */
+		/* should come BEFORE filter */
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		
+		/* This works in IE 8 & 9 too */
+		/* ... but also 5, 6, 7 */
+		filter: alpha(opacity=1);
+		
+		/* Older than Firefox 0.9 */
+		-moz-opacity:1;
+		
+		/* Safari 1.x (pre WebKit!) */
+		-khtml-opacity: 1;
+	    
+		/* Modern!
+		/* Firefox 0.9+, Safari 2?, Chrome any?
+		/* Opera 9+, IE 9+ */
+		opacity: 1;
 }
 .add-nav ul li {
 	float:left;
@@ -1289,6 +1334,10 @@ aside .rss-box .download:hover{
 	height:28px;
 }
 /*services*/
+.serv_main {
+	max-width: 960px;
+	margin: 0 auto;
+}
 .header-bottom.radio{
 	background:#000 url(images/img-002.jpg) no-repeat 50% 0;
 }
