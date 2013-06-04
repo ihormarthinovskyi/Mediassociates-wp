@@ -1,3 +1,5 @@
 *.sql
 
 plugins/better-wp-security/backups/database-backup-1365628450.zip
+
+.DS_Store
